@@ -1,0 +1,176 @@
+{
+  "tree_id": "iter12",
+  "version": 1,
+  "root": "s013",
+  "nodes": {
+    "s001": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "escalate"
+    },
+    "s002": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "toggle_roaming"
+    },
+    "s003": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "grant_app_permission"
+    },
+    "s004": {
+      "question_qid": "q_42f9aa92994d0268",
+      "branches": {
+        "yes": "s002",
+        "no": "s003"
+      },
+      "leaf_label": null
+    },
+    "s005": {
+      "question_qid": "q_147ddcd6238bea49",
+      "branches": {
+        "yes": "s001",
+        "no": "s004"
+      },
+      "leaf_label": null
+    },
+    "s006": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "toggle_roaming"
+    },
+    "s007": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "reseat_sim_card"
+    },
+    "s008": {
+      "question_qid": "q_2e4e2f33c82f36af",
+      "branches": {
+        "yes": "s006",
+        "no": "s007"
+      },
+      "leaf_label": null
+    },
+    "s009": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "toggle_roaming"
+    },
+    "s010": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "disconnect_vpn"
+    },
+    "s011": {
+      "question_qid": "q_06fda376508e7115",
+      "branches": {
+        "yes": "s009",
+        "no": "s010"
+      },
+      "leaf_label": null
+    },
+    "s012": {
+      "question_qid": "q_32353a2bcf79e4a4",
+      "branches": {
+        "yes": "s008",
+        "no": "s011"
+      },
+      "leaf_label": null
+    },
+    "s013": {
+      "question_qid": "q_e943e956d95b4a21",
+      "branches": {
+        "yes": "s005",
+        "no": "s012"
+      },
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_e943e956d95b4a21": {
+      "qid": "q_e943e956d95b4a21",
+      "text": "Does the customer report seeing a \"No Service\" notification or complete loss of cellular network signal?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_147ddcd6238bea49": {
+      "qid": "q_147ddcd6238bea49",
+      "text": "Does the user report seeing a 'No Service' status on their phone?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_42f9aa92994d0268": {
+      "qid": "q_42f9aa92994d0268",
+      "text": "Does the recommended resolution require toggling cellular data roaming settings on the device?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_32353a2bcf79e4a4": {
+      "qid": "q_32353a2bcf79e4a4",
+      "text": "Does the complaint specifically involve the use of a messaging application?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_2e4e2f33c82f36af": {
+      "qid": "q_2e4e2f33c82f36af",
+      "text": "Does the ticket indicate that the user is currently traveling or connected outside of their home network coverage area?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_06fda376508e7115": {
+      "qid": "q_06fda376508e7115",
+      "text": "Is the customer currently traveling internationally or located outside their home network area?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_7aafb376cab408e8": {
+      "qid": "q_7aafb376cab408e8",
+      "text": "Does the inquiry specifically mention degraded mobile data speed?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "ovr:reseat_sim_card",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "baseline": "B1 single-prompt frontier classifier",
+  "model": "gemini-flash-latest",
+  "n": 114,
+  "api_calls": 114,
+  "accuracy": 0.5614,
+  "macro_f1": 0.5432,
+  "coverage_at_0.97": null,
+  "per_class_recall": {
+    "exchange": "25/26",
+    "auto_approve": "3/27",
+    "modify_order": "19/34",
+    "escalate": "2/4",
+    "modify_user": "5/6",
+    "politely_deny": "3/5",
+    "cancel_order": "5/10",
+    "out_of_scope": "2/2"
+  },
+  "note": "confidence is self-rated (0-100), not calibrated probabilities",
+  "wall_seconds": 93
+}

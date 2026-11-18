@@ -1,0 +1,35 @@
+{
+  "tree_id": "induced_20261114_014640",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n002": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "request_photo_proof"
+    },
+    "n003": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "out_of_scope"
+    },
+    "n001": {
+      "question_qid": "q_7e4abee4d7bac9c4",
+      "child_yes": "n002",
+      "child_no": "n003",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_7e4abee4d7bac9c4": {
+      "qid": "q_7e4abee4d7bac9c4",
+      "text": "Does the user request a return or refund of items from the order?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:auto_approve_vs_cancel_order",
+      "resolver": null
+    }
+  }
+}

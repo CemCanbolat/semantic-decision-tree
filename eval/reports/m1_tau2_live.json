@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-11-14T01:13:46Z",
+  "corpus": "data/curated/tau2_retail/examples.jsonl",
+  "warning": "scores produced by gemini-decision-1 - live Gemini Decision 1 run",
+  "baselines": [
+    {
+      "baseline": "B2_hand_tree_soft",
+      "scorer": "gemini-decision-1",
+      "n": 114,
+      "accuracy": 0.1754,
+      "macro_f1": 0.1928,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 0.0263,
+        "precision": 1.0,
+        "threshold": 0.75
+      },
+      "confusion": {
+        "exchange": {
+          "exchange": 4,
+          "needs_info": 11,
+          "escalate": 11
+        },
+        "auto_approve": {
+          "escalate": 14,
+          "modify_user": 2,
+          "needs_info": 7,
+          "auto_approve": 2,
+          "out_of_scope": 2
+        },
+        "modify_order": {
+          "needs_info": 11,
+          "modify_user": 3,
+          "modify_order": 5,
+          "escalate": 13,
+          "cancel_order": 2
+        },
+        "escalate": {
+          "escalate": 4
+        },
+        "modify_user": {
+          "modify_user": 2,
+          "escalate": 3,
+          "needs_info": 1
+        },
+        "politely_deny": {
+          "needs_info": 1,
+          "escalate": 2,
+          "cancel_order": 1,
+          "out_of_scope": 1
+        },
+        "cancel_order": {
+          "out_of_scope": 1,
+          "needs_info": 3,
+          "escalate": 4,
+          "cancel_order": 1,
+          "modify_user": 1
+        },
+        "out_of_scope": {
+          "out_of_scope": 2
+        }
+      },
+      "outcome_counts": {
+        "escalated_margin": 26,
+        "escalated_both": 83,
+        "auto_executed": 5
+      }
+    },
+    {
+      "baseline": "B2_hand_tree_hard",
+      "scorer": "gemini-decision-1",
+      "n": 114,
+      "accuracy": 0.2105,
+      "macro_f1": 0.2977,
+      "coverage_at_0.97": null,
+      "confusion": {
+        "exchange": {
+          "exchange": 6,
+          "needs_info": 15,
+          "escalate": 5
+        },
+        "auto_approve": {
+          "modify_user": 4,
+          "needs_info": 14,
+          "escalate": 4,
+          "auto_approve": 3,
+          "modify_order": 1,
+          "out_of_scope": 1
+        },
+        "modify_order": {
+          "needs_info": 17,
+          "modify_user": 5,
+          "modify_order": 5,
+          "escalate": 3,
+          "cancel_order": 3,
+          "auto_approve": 1
+        },
+        "escalate": {
+          "escalate": 3,
+          "auto_approve": 1
+        },
+        "modify_user": {
+          "modify_user": 2,
+          "escalate": 3,
+          "needs_info": 1
+        },
+        "politely_deny": {
+          "needs_info": 2,
+          "escalate": 1,
+          "cancel_order": 1,
+          "politely_deny": 1
+        },
+        "cancel_order": {
+          "needs_info": 7,
+          "cancel_order": 2,
+          "modify_user": 1
+        },
+        "out_of_scope": {
+          "out_of_scope": 2
+        }
+      },
+      "outcome_counts": {
+        "auto_executed": 114
+      }
+    }
+  ]
+}

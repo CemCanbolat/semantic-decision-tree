@@ -1,0 +1,230 @@
+{
+  "tree_id": "iter8_final_raw",
+  "version": 1,
+  "root": "s021",
+  "nodes": {
+    "s001": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "cancel_order"
+    },
+    "s004": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "cancel_order"
+    },
+    "s005": {
+      "question_qid": "q_938defaab8b90634",
+      "branches": {
+        "yes": "s001",
+        "no": "s004"
+      },
+      "leaf_label": null
+    },
+    "s006": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "modify_order"
+    },
+    "s007": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "out_of_scope"
+    },
+    "s008": {
+      "question_qid": "q_4282cdf2f6d1c5fe",
+      "branches": {
+        "yes": "s006",
+        "no": "s007"
+      },
+      "leaf_label": null
+    },
+    "s009": {
+      "question_qid": "q_3e9ba18ddd9f1114",
+      "branches": {
+        "yes": "s005",
+        "no": "s008"
+      },
+      "leaf_label": null
+    },
+    "s010": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "exchange"
+    },
+    "s011": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "exchange"
+    },
+    "s012": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "exchange"
+    },
+    "s013": {
+      "question_qid": "q_f3e2efa241a51525",
+      "branches": {
+        "o0": "s011",
+        "o1": "s012"
+      },
+      "leaf_label": null
+    },
+    "s014": {
+      "question_qid": "q_938defaab8b90634",
+      "branches": {
+        "yes": "s010",
+        "no": "s013"
+      },
+      "leaf_label": null
+    },
+    "s015": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "modify_user"
+    },
+    "s016": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "auto_approve"
+    },
+    "s017": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "auto_approve"
+    },
+    "s018": {
+      "question_qid": "q_938defaab8b90634",
+      "branches": {
+        "yes": "s016",
+        "no": "s017"
+      },
+      "leaf_label": null
+    },
+    "s019": {
+      "question_qid": "q_1befaaff65001777",
+      "branches": {
+        "yes": "s015",
+        "no": "s018"
+      },
+      "leaf_label": null
+    },
+    "s020": {
+      "question_qid": "q_91bebeb0658b081a",
+      "branches": {
+        "yes": "s014",
+        "no": "s019"
+      },
+      "leaf_label": null
+    },
+    "s021": {
+      "question_qid": "q_0ab95b976b97038d",
+      "branches": {
+        "yes": "s009",
+        "no": "s020"
+      },
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_0ab95b976b97038d": {
+      "qid": "q_0ab95b976b97038d",
+      "text": "Is the referenced order status pending?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "order_status_pending",
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_3e9ba18ddd9f1114": {
+      "qid": "q_3e9ba18ddd9f1114",
+      "text": "Does the customer's request include canceling, returning, or removing an order or item (including as an alternative option)?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_938defaab8b90634": {
+      "qid": "q_938defaab8b90634",
+      "text": "Does the account hold a gift card?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "has_gift_card",
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_94ddf3e252d485c4": {
+      "qid": "q_94ddf3e252d485c4",
+      "text": "Does the customer explicitly request to cancel one or more entire pending orders?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_4282cdf2f6d1c5fe": {
+      "qid": "q_4282cdf2f6d1c5fe",
+      "text": "Does the customer ask to change the delivery address or shipping destination for an order?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_91bebeb0658b081a": {
+      "qid": "q_91bebeb0658b081a",
+      "text": "Does the customer specify desired product attributes (such as size, material, or feature variant) for an exchanged or replacement item?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_f3e2efa241a51525": {
+      "qid": "q_f3e2efa241a51525",
+      "text": "What is the product scope of the customer's request?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "choice",
+      "options": {
+        "o0": "a single product",
+        "o1": "multiple distinct products"
+      },
+      "rubric": null
+    },
+    "q_1befaaff65001777": {
+      "qid": "q_1befaaff65001777",
+      "text": "Does the customer ask to update, change, or check a delivery address or user profile location?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

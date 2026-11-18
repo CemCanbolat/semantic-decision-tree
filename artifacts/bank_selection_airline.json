@@ -1,0 +1,30 @@
+{
+  "included": [
+    "Does the request include checking the balance of a gift card or certificate?",
+    "Does the customer request cancellation of multiple reservations or all upcoming flights without passenger-count restrictions?"
+  ],
+  "remaining": [],
+  "round": 2,
+  "scores": {},
+  "history": [
+    {
+      "round": 0,
+      "event": "baseline (computed only)",
+      "macro_f1": 0.046
+    },
+    {
+      "round": 1,
+      "event": "added",
+      "question": "Does the request include checking the balance of a gift card or certificate?",
+      "macro_f1": 0.1439
+    },
+    {
+      "round": 2,
+      "event": "added",
+      "question": "Does the customer request cancellation of multiple reservations or all upcoming ",
+      "macro_f1": 0.26
+    }
+  ],
+  "done": false,
+  "baseline": 0.045977011494252866
+}

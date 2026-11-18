@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Does the customer ask to exchange an item for a different size, color, or version?",
+    "status": "ok",
+    "true": "The customer explicitly requests replacing an ordered item with an alternate variant, such as a different size, color, or model.",
+    "false": "The customer seeks an identical replacement for defects, a standard return or refund, or asks about availability without requesting a swap."
+  },
+  {
+    "question": "Does the customer mention more than one order or an additional order?",
+    "status": "ok",
+    "true": "The customer explicitly references two or more distinct order IDs, separate transactions, or introduces a second purchase alongside the primary one.",
+    "false": "The customer refers to only one transaction, even with multiple items, split shipments, exchange replacements, or general questions about ordering policies."
+  },
+  {
+    "question": "Does the ticket refer to an order as being pending, just placed, or not yet shipped?",
+    "status": "ok",
+    "true": "The ticket describes an existing order as currently processing, recently placed, awaiting fulfillment, or not yet handed over to a carrier.",
+    "false": "The order is already dispatched, in transit"
+  },
+  {
+    "question": "Does the ticket state or imply that the customer has already received an item or order?",
+    "status": "ok",
+    "true": "The customer indicates physical possession by evaluating, using, unboxing, or seeking returns or repairs for goods they actually took in hand.",
+    "false": "The shipment is pending, delayed, canceled pre-delivery, or marked delivered by tracking yet explicitly claimed missing by the customer."
+  },
+  {
+    "question": "Does the user ask to make changes or modifications to an order or its payment?",
+    "status": "ok",
+    "true": "The user requests altering items, quantities, shipping address, delivery speed, or billing details for an existing, unfulfilled order.",
+    "false": "The user requests complete cancellation, post-delivery returns or exchanges, updates account-level profile defaults, or solely checks order or payment status."
+  },
+  {
+    "question": "Does the ticket mention a specific city or geographic location?",
+    "status": "ok",
+    "true": "The text contains a proper noun identifying a city, town, state, country, or distinct geographic landmark.",
+    "false": "The text only includes generic terms like \"local store,\" numerical store IDs, street addresses without a town, or carrier shipping statuses."
+  },
+  {
+    "question": "Does the text state that the customer wants to return one or more items?",
+    "status": "ok",
+    "true": "The customer explicitly requests or declares an intent to send back received merchandise for a refund or store credit.",
+    "false": "The customer requests an exchange, cancels an unfulfilled order, asks about policies hypothetically, or demands a refund without returning the item."
+  }
+]

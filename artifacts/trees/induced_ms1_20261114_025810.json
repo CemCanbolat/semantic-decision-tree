@@ -1,0 +1,99 @@
+{
+  "tree_id": "ms1_20261114_025810",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n002": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n004": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n006": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n009": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n007": {
+      "question_qid": "q_aa62ef51dda95547",
+      "child_yes": "n008",
+      "child_no": "n009",
+      "leaf_label": null
+    },
+    "n005": {
+      "question_qid": "q_22829f0bec64469f",
+      "child_yes": "n006",
+      "child_no": "n007",
+      "leaf_label": null
+    },
+    "n003": {
+      "question_qid": "q_0ab95b976b97038d",
+      "child_yes": "n004",
+      "child_no": "n005",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_9766cc8ddaea70c1",
+      "child_yes": "n002",
+      "child_no": "n003",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_9766cc8ddaea70c1": {
+      "qid": "q_9766cc8ddaea70c1",
+      "text": "Does the customer request to update, change, or modify an address?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:modify_user",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_0ab95b976b97038d": {
+      "qid": "q_0ab95b976b97038d",
+      "text": "Is the referenced order status pending?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "order_status_pending",
+      "criteria": null
+    },
+    "q_22829f0bec64469f": {
+      "qid": "q_22829f0bec64469f",
+      "text": "Does the customer express a preference for a different size or capacity of an item (such as medium, bigger, or maximum size)?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:exchange_vs_auto_approve",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_aa62ef51dda95547": {
+      "qid": "q_aa62ef51dda95547",
+      "text": "Does the ticket mention wanting a refund?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:auto_approve_vs_exchange",
+      "resolver": null,
+      "criteria": null
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-13T22:00:55Z",
+  "corpus": "data/curated/tau2_retail_fixture/examples.jsonl",
+  "warning": "scores produced by heuristic-keyword-standin - plumbing validation only, not Jev quality",
+  "baselines": [
+    {
+      "baseline": "B2_hand_tree_soft",
+      "scorer": "heuristic-keyword-standin",
+      "n": 2,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 1.0,
+        "precision": 1.0,
+        "threshold": 0.4
+      },
+      "confusion": {
+        "exchange": {
+          "exchange": 2
+        }
+      },
+      "outcome_counts": {
+        "escalated_margin": 2
+      }
+    },
+    {
+      "baseline": "B2_hand_tree_hard",
+      "scorer": "heuristic-keyword-standin",
+      "n": 2,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 1.0,
+        "precision": 1.0,
+        "threshold": 1.0
+      },
+      "confusion": {
+        "exchange": {
+          "exchange": 2
+        }
+      },
+      "outcome_counts": {
+        "auto_executed": 2
+      }
+    }
+  ]
+}

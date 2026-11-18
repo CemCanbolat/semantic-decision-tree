@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-11-14T01:28:34Z",
+  "headline": "M2 gate: contrastive induction beats the hand tree decisively on live tau2 retail",
+  "comparison": {
+    "hand_tree_soft": {
+      "accuracy": 0.1754,
+      "macro_f1": 0.1928,
+      "source": "eval/reports/m1_tau2_live.json"
+    },
+    "hand_tree_hard": {
+      "accuracy": 0.2105,
+      "macro_f1": 0.2977
+    },
+    "induced_v1_soft": {
+      "accuracy": 0.6667,
+      "macro_f1": 0.4555,
+      "questions": 9,
+      "leaves": 12,
+      "frontier_calls": 12,
+      "scorer_calls": 443,
+      "wall_seconds": 193
+    },
+    "majority_class_baseline": {
+      "accuracy": 0.2982,
+      "note": "always predict modify_order (34/114)"
+    }
+  },
+  "per_class_recall": {
+    "auto_approve": "25/27 = 0.926",
+    "cancel_order": "8/10 = 0.800",
+    "exchange": "18/26 = 0.692",
+    "modify_order": "22/34 = 0.647",
+    "out_of_scope": "2/2 = 1.000",
+    "politely_deny": "1/5 = 0.200",
+    "modify_user": "0/6 = 0.000",
+    "escalate": "0/4 = 0.000"
+  },
+  "findings": [
+    "Induced tree more than triples the hand tree (0.667 vs 0.175 soft) and beats majority-class by 2.2x.",
+    "Rare classes (escalate 4, modify_user 6, politely_deny 5) are never separated: contrastive pairs are chosen from the top-2 majority labels at each node, so minority classes never get a dedicated question.",
+    "No 97%-precision operating point exists yet: the margin gate peaks at ~0.727 precision at 0.097 coverage. Confidence calibration, not routing, is the bottleneck for coverage-at-precision.",
+    "Frontier memorization is present in the final tree (product-name questions: tablet/camera/air purifier, ig 0.161-0.277). Candidate selection currently scores on all node examples with no validation split.",
+    "The root question is negation-framed (cert 0.461, the lowest in the tree) - fragile; refinement should rewrite negations into positive form.",
+    "Decisions API answer variance across identical calls is small but nonzero (macro_f1 0.4555 live vs 0.4536 cache replay)."
+  ],
+  "next_moves": [
+    "Validation-split candidate selection inside induction (k-fold over 114) to suppress memorized questions",
+    "Minority-class contrastive pairs: force one-vs-rest proposals for classes below a support threshold",
+    "Negation rewrite refinement for low-certainty questions",
+    "Temperature scaling on cached p-vectors, then re-examine the coverage-at-precision curve"
+  ]
+}

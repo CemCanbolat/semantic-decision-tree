@@ -1,0 +1,131 @@
+{
+  "labels": [
+    "auto_approve",
+    "cancel_order",
+    "escalate",
+    "exchange",
+    "modify_order",
+    "modify_user",
+    "out_of_scope",
+    "politely_deny"
+  ],
+  "features": [
+    "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+    "Does the customer ask to change their account or user address?",
+    "Does the text mention items that have already been received?",
+    "Does the ticket refer to an order that is pending or has just been placed?",
+    "Does the ticket state or imply that the customer has already received an item or order?",
+    "Is the referenced order status delivered?",
+    "Is the referenced order status pending?",
+    "Have there been more than two refunds on the account's orders?",
+    "Does the account hold a gift card?"
+  ],
+  "temperature": 0.6182,
+  "weights": [
+    [
+      -0.9997357064805914,
+      -0.20546055144467001,
+      1.7215404556029619,
+      -0.13779563364566683,
+      1.5737589989528749,
+      -0.2809769103939706,
+      -0.07904628999445622,
+      0.0,
+      0.49347263732749336
+    ],
+    [
+      0.8169174280267558,
+      -0.8504555781427785,
+      -0.20683613909015516,
+      0.6042554308756234,
+      -0.2917578738546665,
+      -0.1366907613556509,
+      1.124600653662027,
+      0.0,
+      0.07450832987141326
+    ],
+    [
+      -1.4062995696823828,
+      -0.41874406934815284,
+      -0.95783357672465,
+      -1.3660299735541876,
+      0.05076701994461702,
+      0.5222878068245742,
+      -1.0644602744439453,
+      0.0,
+      -0.8729311877116869
+    ],
+    [
+      1.7986305522476584,
+      -0.3992534641689914,
+      0.8276364137333245,
+      -0.7352649612210529,
+      1.1693102523967682,
+      0.7680386737360563,
+      -0.2976820586267558,
+      0.0,
+      0.017116768132789888
+    ],
+    [
+      1.9226234729575022,
+      -0.1176059425000949,
+      -0.21210003231510277,
+      0.7946998020267556,
+      -0.3928636600353738,
+      -0.24596423548294244,
+      0.49957548413024205,
+      0.0,
+      0.4751053060918836
+    ],
+    [
+      0.8700617894176803,
+      2.8924629270500946,
+      -0.535026298799309,
+      -0.19826616534360322,
+      -0.6167208554937555,
+      -0.3876702539184834,
+      -0.5845840130932439,
+      0.0,
+      -0.299653446242115
+    ],
+    [
+      -1.7603823767720432,
+      -0.39930411495365226,
+      -0.5913238781830439,
+      0.6695693746747909,
+      -0.5730880758745752,
+      -0.46380869042319184,
+      1.4205429831826832,
+      0.0,
+      -1.0760068063534984
+    ],
+    [
+      -1.241815589714578,
+      -0.5016392064917568,
+      -0.046056944224027736,
+      0.36883212618733985,
+      -0.919405806035888,
+      0.22478437101360935,
+      -1.0189464848165535,
+      0.0,
+      1.1883883988837216
+    ]
+  ],
+  "bias": [
+    -0.6975994631292595,
+    -0.473601992805555,
+    2.211469679971076,
+    -1.7155046277216968,
+    -1.0799171869203232,
+    0.1110082785077599,
+    0.3895710813390245,
+    1.254574230758982
+  ],
+  "selected_questions": [
+    "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+    "Does the ticket state or imply that the customer has already received an item or order?",
+    "Does the text mention items that have already been received?",
+    "Does the customer ask to change their account or user address?",
+    "Does the ticket refer to an order that is pending or has just been placed?"
+  ]
+}

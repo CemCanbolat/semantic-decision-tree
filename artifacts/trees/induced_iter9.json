@@ -1,0 +1,99 @@
+{
+  "tree_id": "iter9_full",
+  "version": 1,
+  "root": "s008",
+  "nodes": {
+    "s001": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "toggle_roaming"
+    },
+    "s002": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "disconnect_vpn"
+    },
+    "s003": {
+      "question_qid": "q_a139e3e2fd5ce0ee",
+      "branches": {
+        "yes": "s001",
+        "no": "s002"
+      },
+      "leaf_label": null
+    },
+    "s004": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "escalate"
+    },
+    "s005": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "toggle_roaming"
+    },
+    "s006": {
+      "question_qid": null,
+      "branches": null,
+      "leaf_label": "reseat_sim_card"
+    },
+    "s007": {
+      "question_qid": "q_89dba8cc034af01c",
+      "branches": {
+        "yes": "s005",
+        "no": "s006"
+      },
+      "leaf_label": null
+    },
+    "s008": {
+      "question_qid": "q_c046c8aa9d7a3a75",
+      "branches": {
+        "o0": "s003",
+        "o1": "s004",
+        "o2": "s007"
+      },
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_c046c8aa9d7a3a75": {
+      "qid": "q_c046c8aa9d7a3a75",
+      "text": "What is the primary network symptom described by the customer?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "choice",
+      "options": {
+        "o0": "Mobile data is slow or cutting out",
+        "o1": "Device displays a complete No Service error",
+        "o2": "Other network issue"
+      },
+      "rubric": null
+    },
+    "q_a139e3e2fd5ce0ee": {
+      "qid": "q_a139e3e2fd5ce0ee",
+      "text": "Is the user currently traveling internationally or outside their primary network coverage area?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "q_89dba8cc034af01c": {
+      "qid": "q_89dba8cc034af01c",
+      "text": "Is the customer currently traveling outside their carrier's primary home network area or roaming abroad?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "iter8",
+      "resolver": null,
+      "criteria": null,
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

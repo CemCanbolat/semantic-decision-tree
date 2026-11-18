@@ -1,0 +1,195 @@
+{
+  "tree_id": "induced_20261114_012327",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n004": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n005": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n003": {
+      "question_qid": "q_ac51ae29aaf5ca45",
+      "child_yes": "n004",
+      "child_no": "n005",
+      "leaf_label": null
+    },
+    "n007": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "out_of_scope"
+    },
+    "n006": {
+      "question_qid": "q_d1ed294c1a5fbde3",
+      "child_yes": "n007",
+      "child_no": "n008",
+      "leaf_label": null
+    },
+    "n002": {
+      "question_qid": "q_6a5507c20168cc01",
+      "child_yes": "n003",
+      "child_no": "n006",
+      "leaf_label": null
+    },
+    "n012": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n013": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n011": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n014": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "politely_deny"
+    },
+    "n010": {
+      "question_qid": "q_f7137a9be7887fd7",
+      "child_yes": "n011",
+      "child_no": "n014",
+      "leaf_label": null
+    },
+    "n017": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n018": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n016": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n019": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "cancel_order"
+    },
+    "n015": {
+      "question_qid": "q_861a28a55b64509b",
+      "child_yes": "n016",
+      "child_no": "n019",
+      "leaf_label": null
+    },
+    "n009": {
+      "question_qid": "q_cd87aa47d3b917e7",
+      "child_yes": "n010",
+      "child_no": "n015",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_aa84d14d398f9e7a",
+      "child_yes": "n002",
+      "child_no": "n009",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_aa84d14d398f9e7a": {
+      "qid": "q_aa84d14d398f9e7a",
+      "text": "Does the text omit any mention of \"return\" or \"cancel\"?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node1",
+      "resolver": null
+    },
+    "q_6a5507c20168cc01": {
+      "qid": "q_6a5507c20168cc01",
+      "text": "Does the ticket mention modifying an order or changing an existing order detail?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node2",
+      "resolver": null
+    },
+    "q_ac51ae29aaf5ca45": {
+      "qid": "q_ac51ae29aaf5ca45",
+      "text": "Does the text contain the word \"modify\", \"change\", or \"upgrade\"?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node3",
+      "resolver": null
+    },
+    "q_d1ed294c1a5fbde3": {
+      "qid": "q_d1ed294c1a5fbde3",
+      "text": "Does the text explicitly mention wanting to exchange an item or get a new pair or different size of a product?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node6",
+      "resolver": null
+    },
+    "q_cd87aa47d3b917e7": {
+      "qid": "q_cd87aa47d3b917e7",
+      "text": "Does the ticket mention a preference regarding the refund or payment method (such as PayPal, original payment, or refunding to a specific payment method)?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node7",
+      "resolver": null
+    },
+    "q_f7137a9be7887fd7": {
+      "qid": "q_f7137a9be7887fd7",
+      "text": "Does the ticket mention a specific product such as a tablet, camera, air purifier, luggage, or skateboard?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node8",
+      "resolver": null
+    },
+    "q_c184399a4eeb1077": {
+      "qid": "q_c184399a4eeb1077",
+      "text": "Does the ticket text mention an air purifier, a camera, or a tablet?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node9",
+      "resolver": null
+    },
+    "q_861a28a55b64509b": {
+      "qid": "q_861a28a55b64509b",
+      "text": "Does the customer explicitly state an intention or request to return at least one item?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node10",
+      "resolver": null
+    },
+    "q_971e16d699f56ced": {
+      "qid": "q_971e16d699f56ced",
+      "text": "Does the reason for contact mention the word \"cancel\"?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:node11",
+      "resolver": null
+    }
+  }
+}

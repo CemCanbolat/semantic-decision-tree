@@ -1,0 +1,131 @@
+{
+  "labels": [
+    "disconnect_vpn",
+    "escalate",
+    "grant_app_permission",
+    "reboot_device",
+    "refuel_data",
+    "reseat_sim_card",
+    "set_network_mode_preference",
+    "toggle_airplane_mode",
+    "toggle_data",
+    "toggle_roaming",
+    "toggle_wifi_calling"
+  ],
+  "features": [
+    "Is the customer currently traveling outside their carrier's primary home network area or roaming abroad?",
+    "Is the user currently traveling internationally or outside their primary network coverage area?",
+    "Is the referenced order status delivered?",
+    "Is the referenced order status pending?",
+    "Have there been more than two refunds on the account's orders?",
+    "Does the account hold a gift card?"
+  ],
+  "temperature": 0.3074,
+  "weights": [
+    [
+      -0.135433983908082,
+      -0.13306802400653897,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.29796979471531826,
+      0.45152425210344743,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.5700519980213417,
+      -0.578379797608873,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.06588715857547035,
+      0.07711971321676277,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.5063558472934216,
+      -0.5900469742192633,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.4854047346301026,
+      -0.5340451859666348,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.12915973510850273,
+      -0.12712771223674474,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.05344500116327584,
+      0.06525879763728479,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.57350646875133,
+      -0.5745961916415113,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      2.113797977961547,
+      2.0802608941393905,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.13118716470282876,
+      -0.1368997714173191,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "bias": [
+    -0.8666908550467481,
+    0.8575588067637724,
+    1.0893439122805488,
+    0.33628183203908907,
+    1.0854553277707637,
+    1.0788561566460122,
+    -0.8680727375256077,
+    -2.245334498755513,
+    1.0892821870015714,
+    -0.689983302004791,
+    -0.8666968291690911
+  ],
+  "selected_questions": [
+    "Is the user currently traveling internationally or outside their primary network coverage area?",
+    "Is the customer currently traveling outside their carrier's primary home network area or roaming abroad?"
+  ]
+}

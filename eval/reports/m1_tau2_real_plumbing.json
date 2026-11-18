@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-11-13T22:14:33Z",
+  "corpus": "data/curated/tau2_retail/examples.jsonl",
+  "warning": "scores produced by heuristic-keyword-standin - plumbing validation only, not model quality",
+  "baselines": [
+    {
+      "baseline": "B2_hand_tree_soft",
+      "scorer": "heuristic-keyword-standin",
+      "n": 114,
+      "accuracy": 0.0439,
+      "macro_f1": 0.0477,
+      "coverage_at_0.97": null,
+      "confusion": {
+        "exchange": {
+          "exchange": 3,
+          "modify_user": 14,
+          "needs_info": 8,
+          "escalate": 1
+        },
+        "auto_approve": {
+          "modify_user": 12,
+          "needs_info": 12,
+          "modify_order": 1,
+          "escalate": 2
+        },
+        "modify_order": {
+          "modify_user": 8,
+          "needs_info": 24,
+          "modify_order": 1,
+          "cancel_order": 1
+        },
+        "escalate": {
+          "needs_info": 3,
+          "modify_user": 1
+        },
+        "modify_user": {
+          "needs_info": 6
+        },
+        "politely_deny": {
+          "needs_info": 5
+        },
+        "cancel_order": {
+          "needs_info": 8,
+          "escalate": 1,
+          "cancel_order": 1
+        },
+        "out_of_scope": {
+          "needs_info": 2
+        }
+      },
+      "outcome_counts": {
+        "escalated_margin": 75,
+        "auto_executed": 39
+      }
+    },
+    {
+      "baseline": "B2_hand_tree_hard",
+      "scorer": "heuristic-keyword-standin",
+      "n": 114,
+      "accuracy": 0.0439,
+      "macro_f1": 0.0477,
+      "coverage_at_0.97": null,
+      "confusion": {
+        "exchange": {
+          "exchange": 3,
+          "modify_user": 14,
+          "needs_info": 8,
+          "escalate": 1
+        },
+        "auto_approve": {
+          "modify_user": 12,
+          "needs_info": 12,
+          "modify_order": 1,
+          "escalate": 2
+        },
+        "modify_order": {
+          "modify_user": 8,
+          "needs_info": 24,
+          "modify_order": 1,
+          "cancel_order": 1
+        },
+        "escalate": {
+          "needs_info": 3,
+          "modify_user": 1
+        },
+        "modify_user": {
+          "needs_info": 6
+        },
+        "politely_deny": {
+          "needs_info": 5
+        },
+        "cancel_order": {
+          "needs_info": 8,
+          "escalate": 1,
+          "cancel_order": 1
+        },
+        "out_of_scope": {
+          "needs_info": 2
+        }
+      },
+      "outcome_counts": {
+        "auto_executed": 114
+      }
+    }
+  ]
+}

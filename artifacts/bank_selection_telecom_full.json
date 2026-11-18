@@ -1,0 +1,30 @@
+{
+  "included": [
+    "Is the user currently traveling internationally or outside their primary network coverage area?",
+    "Is the customer currently traveling outside their carrier's primary home network area or roaming abroad?"
+  ],
+  "remaining": [],
+  "round": 2,
+  "scores": {},
+  "history": [
+    {
+      "round": 0,
+      "event": "baseline (computed only)",
+      "macro_f1": 0.0399
+    },
+    {
+      "round": 1,
+      "event": "added",
+      "question": "Is the user currently traveling internationally or outside their primary network",
+      "macro_f1": 0.2141
+    },
+    {
+      "round": 2,
+      "event": "added",
+      "question": "Is the customer currently traveling outside their carrier's primary home network",
+      "macro_f1": 0.2183
+    }
+  ],
+  "done": false,
+  "baseline": 0.039856570114762034
+}

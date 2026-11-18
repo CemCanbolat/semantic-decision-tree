@@ -1,0 +1,30 @@
+{
+  "system": "bank-selected (5 semantic + 4 computed)",
+  "cv_accuracy": 0.6579,
+  "cv_macro_f1": 0.5736,
+  "temperature": 0.6182,
+  "coverage_at_0.97": {
+    "target_precision": 0.97,
+    "coverage": 0.0088,
+    "precision": 1.0,
+    "threshold": 0.9
+  },
+  "per_class_recall": {
+    "auto_approve": "19/27",
+    "cancel_order": "3/10",
+    "escalate": "3/4",
+    "exchange": "23/26",
+    "modify_order": "17/34",
+    "modify_user": "6/6",
+    "out_of_scope": "2/2",
+    "politely_deny": "2/5"
+  },
+  "trajectory": [
+    0.1917,
+    0.377,
+    0.4722,
+    0.5161,
+    0.5548,
+    0.5736
+  ]
+}

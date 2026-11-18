@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-11-13T21:24:50Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "tests/fixtures/tau2",
+  "n_examples": 2,
+  "label_counts": {
+    "exchange": 2
+  },
+  "split_counts": {
+    "test": 1,
+    "train": 1
+  },
+  "family_counts": {
+    "tau2:exchange_delivered_order_items": 2
+  },
+  "ambiguous_tasks": 0,
+  "user_join_failures": 0,
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}

@@ -1,0 +1,45 @@
+{
+  "questions": {
+    "a84790ffd6a43e60": {
+      "text": "What is the primary nature of the customer's request?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:16:16Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "modifying attributes of an existing booking (such as cabin class, baggage, passe",
+        "o1": "canceling a reservation",
+        "o2": "seeking compensation or lodging a complaint",
+        "o3": "initiating a new booking"
+      },
+      "rubric": null
+    },
+    "5079ab189862d033": {
+      "text": "Does the request include checking the balance of a gift card or certificate?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:16:16Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "bc0b888402c41a08": {
+      "text": "Does the customer request cancellation of multiple reservations or all upcoming flights without passenger-count restrictions?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:16:16Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

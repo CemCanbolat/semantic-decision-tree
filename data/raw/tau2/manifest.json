@@ -1,0 +1,37 @@
+{
+  "source_repo": "https://github.com/sierra-research/tau2-bench",
+  "ref": "c06b07dd7c4d4ec61ba6ff9bcdf0b15dd7ef36d4 (pinned clone in tau2_clone/tau2-bench)",
+  "fetch_method": "raw.githubusercontent.com via web reader; sandbox has no direct network",
+  "license_note": "MIT License, Copyright (c) 2025 Sierra Research - derived datasets may be redistributed with attribution",
+  "files": {
+    "retail_policy.md": {
+      "status": "complete",
+      "path": "data/raw/tau2/retail_policy.md",
+      "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+      "bytes": 6699,
+      "note": "authoritative copy from pinned clone (replaces web-reader retyped copy)"
+    },
+    "retail_split_tasks.json": {
+      "status": "complete",
+      "path": "data/raw/tau2/retail_split_tasks.json",
+      "sha256": "ed0580ec52575b63fbf76568af42490da6ee7783ecb4aa81af46961291358f20",
+      "bytes": 3263,
+      "note": "authoritative copy from pinned clone (replaces web-reader retyped copy)"
+    },
+    "retail_tasks.json": {
+      "status": "complete",
+      "path": "tau2_clone/tau2-bench/data/tau2/domains/retail/tasks.json",
+      "n_tasks": 114
+    },
+    "retail_db.json": {
+      "status": "complete",
+      "path": "tau2_clone/tau2-bench/data/tau2/domains/retail/db.json",
+      "note": "500 users, 1000 orders, top-level orders/products/users"
+    },
+    "retail_data_model.py": {
+      "status": "inspected",
+      "note": "schema facts (Variant/Product/User/Order fields, OrderStatus values) verified against src/tau2/domains/retail/data_model.py"
+    }
+  },
+  "pin_next_step": "git clone on a networked machine; record git rev-parse HEAD here and re-run the curator on the full retail data"
+}

@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-11-15T13:21:01Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "/tmp/tmpampwj43c",
+  "n_examples": 2285,
+  "label_counts": {
+    "disconnect_vpn": 4,
+    "escalate": 32,
+    "grant_app_permission": 48,
+    "reboot_device": 14,
+    "refuel_data": 156,
+    "reseat_sim_card": 256,
+    "set_network_mode_preference": 4,
+    "toggle_airplane_mode": 1,
+    "toggle_data": 86,
+    "toggle_roaming": 1680,
+    "toggle_wifi_calling": 4
+  },
+  "split_counts": {
+    "full": 2151,
+    "small": 20,
+    "test": 40,
+    "train": 74
+  },
+  "family_counts": {
+    "tau2:disconnect_vpn": 4,
+    "tau2:enable_roaming": 560,
+    "tau2:grant_app_permission": 48,
+    "tau2:reboot_device": 14,
+    "tau2:refuel_data": 156,
+    "tau2:reseat_sim_card": 256,
+    "tau2:set_network_mode_preference": 4,
+    "tau2:toggle_airplane_mode": 1,
+    "tau2:toggle_data": 70,
+    "tau2:toggle_data_saver_mode": 16,
+    "tau2:toggle_roaming": 1120,
+    "tau2:toggle_wifi_calling": 4,
+    "tau2:transfer_to_human_agents": 32
+  },
+  "ambiguous_tasks": 2237,
+  "user_join_failures": 2285,
+  "order_join_failures": 2285,
+  "domain": "telecom",
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}

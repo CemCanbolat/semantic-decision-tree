@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# third-party benchmark clone (1.4GB; see third_party/README.md)
+tau2_clone/
+
+# agent/infra scaffolding
+.aws/
+.codex/
+.agents/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.git-real/

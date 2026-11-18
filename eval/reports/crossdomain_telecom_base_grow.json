@@ -1,0 +1,29 @@
+{
+  "experiment": "iteration9_full_corpus_no_cv",
+  "tree_insample": {
+    "accuracy": 0.8158,
+    "macro_f1": 0.3604,
+    "coverage_at_0.97": null,
+    "nodes": 13,
+    "leaves": 9,
+    "mean_depth": 1.44,
+    "max_depth": 3,
+    "types": {
+      "noul": 5
+    },
+    "uniform_pruned": 2
+  },
+  "combiner_cv": {
+    "n_features": 9,
+    "cv_accuracy": 0.7105,
+    "cv_macro_f1": 0.3161,
+    "temperature": 0.5376
+  },
+  "vs": {
+    "champion_bank_selected": 0.5903,
+    "iter7_B_tree_insample": 0.7018,
+    "iter8_deep_oof": 0.3154
+  },
+  "best_feature_set": "iter9",
+  "wall_seconds": 206
+}

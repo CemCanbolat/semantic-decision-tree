@@ -1,0 +1,99 @@
+{
+  "tree_id": "ms0_20261114_025810",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n003": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n004": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n002": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n006": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n009": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n007": {
+      "question_qid": "q_a7db74ff71b02ce6",
+      "child_yes": "n008",
+      "child_no": "n009",
+      "leaf_label": null
+    },
+    "n005": {
+      "question_qid": "q_0ab95b976b97038d",
+      "child_yes": "n006",
+      "child_no": "n007",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_d36bd7b5e650fa38",
+      "child_yes": "n002",
+      "child_no": "n005",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_d36bd7b5e650fa38": {
+      "qid": "q_d36bd7b5e650fa38",
+      "text": "Does the customer ask to modify or change an attribute of a pending order?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_dc805f03e2e40c86": {
+      "qid": "q_dc805f03e2e40c86",
+      "text": "Does the text mention items that have already been received?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:auto_approve",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_0ab95b976b97038d": {
+      "qid": "q_0ab95b976b97038d",
+      "text": "Is the referenced order status pending?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "order_status_pending",
+      "criteria": null
+    },
+    "q_a7db74ff71b02ce6": {
+      "qid": "q_a7db74ff71b02ce6",
+      "text": "Does the ticket describe a request to replace an item with one that has different specifications, dimensions, or capacity (such as zoom, size, pressure, brightness, or processor specs)?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:exchange_vs_auto_approve",
+      "resolver": null,
+      "criteria": null
+    }
+  }
+}

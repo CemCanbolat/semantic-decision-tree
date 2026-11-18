@@ -1,0 +1,64 @@
+{
+  "questions": {
+    "5aa36a749de53128": {
+      "text": "Does the customer specifically state that their phone is displaying a 'No Service' message?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:19:47Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "b7ce788bcdf1ec07": {
+      "text": "Has the user already attempted restarting their device during the current troubleshooting session?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:19:47Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "cd3bc1698596e91d": {
+      "text": "Have basic local troubleshooting steps, such as toggling airplane mode, already been completed?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:19:47Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "f43960ab609e992b": {
+      "text": "Is the customer contacting specifically about an inability to send MMS messages?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:19:47Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "ea4bce3c410e4831": {
+      "text": "Is the customer currently traveling outside their domestic network area or abroad?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:19:47Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

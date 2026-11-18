@@ -1,0 +1,67 @@
+{
+  "included": [
+    "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+    "Does the ticket state or imply that the customer has already received an item or order?",
+    "Does the text mention items that have already been received?",
+    "Does the customer ask to change their account or user address?",
+    "Does the ticket refer to an order that is pending or has just been placed?"
+  ],
+  "remaining": [
+    "Does the customer request to update, change, or modify an address?",
+    "Does the ticket mention updating, modifying, or changing an address?",
+    "Does the ticket mention changing the size, color, or specifications of an item?",
+    "Does the customer ask to modify or change an attribute of a pending order?",
+    "Does the ticket refer to an order as being pending, just placed, or not yet shipped?",
+    "Does the text state that the customer wants to return one or more items?",
+    "Does the ticket describe a request to replace an item with one that has different specifications, dimensions, or capacity (such as zoom, size, pressure, brightness, or processor specs)?"
+  ],
+  "round": 5,
+  "scores": {
+    "r5::Does the customer request to update, change, or modify an address?": 0.5658,
+    "r5::Does the ticket mention updating, modifying, or changing an address?": 0.5588,
+    "r5::Does the ticket mention changing the size, color, or specifications of an item?": 0.5588,
+    "r5::Does the customer ask to modify or change an attribute of a pending order?": 0.5732,
+    "r5::Does the ticket refer to an order as being pending, just placed, or not yet shipped?": 0.5553,
+    "r5::Does the text state that the customer wants to return one or more items?": 0.5596,
+    "r5::Does the ticket describe a request to replace an item with one that has different specifications, dimensions, or capacity (such as zoom, size, pressure, brightness, or processor specs)?": 0.5623
+  },
+  "history": [
+    {
+      "round": 0,
+      "event": "baseline (computed only)",
+      "macro_f1": 0.1917
+    },
+    {
+      "round": 1,
+      "event": "added",
+      "question": "Does the customer ask to change or modify an attribute of an item or order (such",
+      "macro_f1": 0.377
+    },
+    {
+      "round": 2,
+      "event": "added",
+      "question": "Does the ticket state or imply that the customer has already received an item or",
+      "macro_f1": 0.4722
+    },
+    {
+      "round": 3,
+      "event": "added",
+      "question": "Does the text mention items that have already been received?",
+      "macro_f1": 0.5161
+    },
+    {
+      "round": 4,
+      "event": "added",
+      "question": "Does the customer ask to change their account or user address?",
+      "macro_f1": 0.5548
+    },
+    {
+      "round": 5,
+      "event": "added",
+      "question": "Does the ticket refer to an order that is pending or has just been placed?",
+      "macro_f1": 0.5736
+    }
+  ],
+  "done": true,
+  "baseline": 0.19172607019788548
+}

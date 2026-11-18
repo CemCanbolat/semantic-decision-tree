@@ -1,0 +1,81 @@
+{
+  "labels": [
+    "book_order",
+    "cancel_order",
+    "escalate",
+    "modify_order",
+    "out_of_scope",
+    "politely_deny"
+  ],
+  "features": [
+    "Does the customer request cancellation of multiple reservations or all upcoming flights without passenger-count restrictions?",
+    "Does the request include checking the balance of a gift card or certificate?",
+    "Is the referenced order status delivered?",
+    "Is the referenced order status pending?",
+    "Have there been more than two refunds on the account's orders?",
+    "Does the account hold a gift card?"
+  ],
+  "temperature": 1.8909,
+  "weights": [
+    [
+      -0.7274771169315022,
+      2.258590770832987,
+      0.0,
+      0.0,
+      0.0,
+      0.45246431418965494
+    ],
+    [
+      2.481631142684636,
+      -0.4789991453329577,
+      0.0,
+      0.0,
+      0.0,
+      1.024367811557023
+    ],
+    [
+      -1.0086139009482271,
+      -0.39710167852513145,
+      0.0,
+      0.0,
+      0.0,
+      -1.9428003122808963
+    ],
+    [
+      0.3689106066410132,
+      -0.17119630690174242,
+      0.0,
+      0.0,
+      0.0,
+      1.300443826774287
+    ],
+    [
+      -0.9526943186319174,
+      -0.5809353908849345,
+      0.0,
+      0.0,
+      0.0,
+      -0.8028268849363798
+    ],
+    [
+      -0.16175641281400496,
+      -0.6303582491882229,
+      0.0,
+      0.0,
+      0.0,
+      -0.031648755303690705
+    ]
+  ],
+  "bias": [
+    -0.3497297837649586,
+    -0.9123477359151558,
+    0.8736034379072465,
+    -0.6276807946333852,
+    0.6912072865278411,
+    0.3249475898784145
+  ],
+  "selected_questions": [
+    "Does the request include checking the balance of a gift card or certificate?",
+    "Does the customer request cancellation of multiple reservations or all upcoming flights without passenger-count restrictions?"
+  ]
+}

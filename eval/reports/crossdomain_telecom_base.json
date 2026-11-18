@@ -1,0 +1,27 @@
+{
+  "system": "bank-selected (2 semantic + computed)",
+  "cv_accuracy": 0.7105,
+  "cv_macro_f1": 0.2959,
+  "temperature": 0.4065,
+  "coverage_at_0.97": {
+    "target_precision": 0.97,
+    "coverage": 0.5614,
+    "precision": 1.0,
+    "threshold": 0.9
+  },
+  "per_class_recall": {
+    "escalate": "8/20",
+    "grant_app_permission": "0/3",
+    "reboot_device": "0/3",
+    "refuel_data": "6/9",
+    "reseat_sim_card": "3/10",
+    "set_network_mode_preference": "0/1",
+    "toggle_data": "0/4",
+    "toggle_roaming": "64/64"
+  },
+  "trajectory": [
+    0.0395,
+    0.2805,
+    0.2959
+  ]
+}

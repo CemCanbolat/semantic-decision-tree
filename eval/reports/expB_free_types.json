@@ -1,0 +1,51 @@
+{
+  "experiment": "B_free_types",
+  "question_types": {
+    "choice": 1,
+    "noul": 3
+  },
+  "picked": [
+    {
+      "depth": 1,
+      "question": "Does the customer ask about an order that is pending, not yet delivered, or recently submitted?",
+      "type": "noul",
+      "score": 0.8038
+    },
+    {
+      "depth": 1,
+      "question": "Does the customer explicitly mention being frustrated or in a bad mood?",
+      "type": "noul",
+      "score": 0.0971
+    },
+    {
+      "depth": 1,
+      "question": "Does the customer request assistance regarding a physical delivery or account address?",
+      "type": "noul",
+      "score": 0.718
+    },
+    {
+      "depth": 0,
+      "question": "What is the primary adjustment sought regarding order items?",
+      "type": "choice",
+      "score": 0.7857
+    }
+  ],
+  "tree": {
+    "accuracy": 0.7018,
+    "macro_f1": 0.5277,
+    "n_leaves": 6,
+    "coverage_at_0.97": {
+      "target_precision": 0.97,
+      "coverage": 0.1053,
+      "precision": 1.0,
+      "threshold": 0.95
+    }
+  },
+  "combiner": {
+    "n_features": 10,
+    "cv_accuracy": 0.5263,
+    "cv_macro_f1": 0.4496,
+    "temperature": 0.8175
+  },
+  "best_feature_set": "expB"
+}

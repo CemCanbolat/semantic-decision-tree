@@ -1,0 +1,155 @@
+{
+  "tree_id": "induced_20261114_015416",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n003": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n005": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n007": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n006": {
+      "question_qid": "q_c266b85a7582c585",
+      "child_yes": "n007",
+      "child_no": "n008",
+      "leaf_label": null
+    },
+    "n004": {
+      "question_qid": "q_e61a09b871e5fb39",
+      "child_yes": "n005",
+      "child_no": "n006",
+      "leaf_label": null
+    },
+    "n002": {
+      "question_qid": "q_d57963dd7735b181",
+      "child_yes": "n003",
+      "child_no": "n004",
+      "leaf_label": null
+    },
+    "n011": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "politely_deny"
+    },
+    "n013": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n014": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "cancel_order"
+    },
+    "n012": {
+      "question_qid": "q_95a2164396546593",
+      "child_yes": "n013",
+      "child_no": "n014",
+      "leaf_label": null
+    },
+    "n010": {
+      "question_qid": "q_eb1b29d41a2bc99e",
+      "child_yes": "n011",
+      "child_no": "n012",
+      "leaf_label": null
+    },
+    "n015": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n009": {
+      "question_qid": "q_4890e0593ae87c3c",
+      "child_yes": "n010",
+      "child_no": "n015",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_fa808856120f2ebb",
+      "child_yes": "n002",
+      "child_no": "n009",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_fa808856120f2ebb": {
+      "qid": "q_fa808856120f2ebb",
+      "text": "Does the customer ask to exchange an item for a different size, color, or version?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "resolver": null
+    },
+    "q_d57963dd7735b181": {
+      "qid": "q_d57963dd7735b181",
+      "text": "Does the customer mention more than one order or an additional order?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "resolver": null
+    },
+    "q_e61a09b871e5fb39": {
+      "qid": "q_e61a09b871e5fb39",
+      "text": "Does the ticket refer to an order as being pending, just placed, or not yet shipped?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "resolver": null
+    },
+    "q_c266b85a7582c585": {
+      "qid": "q_c266b85a7582c585",
+      "text": "Does the ticket state or imply that the customer has already received an item or order?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:exchange_vs_modify_order",
+      "resolver": null
+    },
+    "q_4890e0593ae87c3c": {
+      "qid": "q_4890e0593ae87c3c",
+      "text": "Does the user ask to make changes or modifications to an order or its payment?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:modify_order",
+      "resolver": null
+    },
+    "q_eb1b29d41a2bc99e": {
+      "qid": "q_eb1b29d41a2bc99e",
+      "text": "Does the ticket mention a specific city or geographic location?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:modify_user",
+      "resolver": null
+    },
+    "q_95a2164396546593": {
+      "qid": "q_95a2164396546593",
+      "text": "Does the text state that the customer wants to return one or more items?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:auto_approve_vs_cancel_order",
+      "resolver": null
+    }
+  }
+}

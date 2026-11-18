@@ -1,0 +1,20 @@
+{
+  "system": "bank-selected (2 semantic + computed)",
+  "cv_accuracy": 0.3,
+  "cv_macro_f1": 0.26,
+  "temperature": 1.8909,
+  "coverage_at_0.97": null,
+  "per_class_recall": {
+    "book_order": "4/8",
+    "cancel_order": "2/4",
+    "escalate": "0/1",
+    "modify_order": "9/14",
+    "out_of_scope": "0/4",
+    "politely_deny": "0/19"
+  },
+  "trajectory": [
+    0.046,
+    0.1439,
+    0.26
+  ]
+}

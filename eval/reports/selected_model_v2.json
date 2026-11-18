@@ -1,0 +1,150 @@
+{
+  "labels": [
+    "auto_approve",
+    "cancel_order",
+    "escalate",
+    "exchange",
+    "modify_order",
+    "modify_user",
+    "out_of_scope",
+    "politely_deny"
+  ],
+  "features": [
+    "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+    "Does the customer ask to change their account or user address?",
+    "Does the customer's request include canceling, returning, or removing an order or item (including as an alternative option)?",
+    "Does the text mention items that have already been received?",
+    "Does the ticket refer to an order that is pending or has just been placed?",
+    "Does the ticket state or imply that the customer has already received an item or order?",
+    "Is the referenced order status delivered?",
+    "Is the referenced order status pending?",
+    "Have there been more than two refunds on the account's orders?",
+    "Does the account hold a gift card?"
+  ],
+  "temperature": 0.6182,
+  "weights": [
+    [
+      -0.8224484192621759,
+      -0.16812409861314317,
+      1.0154427934838308,
+      1.6361680992831054,
+      -0.11589940090056264,
+      1.490944060198196,
+      -0.3260584324230895,
+      -0.00898824798775964,
+      0.0,
+      0.4731874130684173
+    ],
+    [
+      0.7486671511624325,
+      -0.5089425822646396,
+      1.854555911574419,
+      -0.2538708176891929,
+      0.5651799154541908,
+      -0.38203056091826504,
+      -0.221861605133617,
+      1.2827922770002964,
+      0.0,
+      -0.06874561695839443
+    ],
+    [
+      -1.4142220171449913,
+      -0.38282120363054817,
+      0.04974768605476902,
+      -0.9595196769204183,
+      -1.3583307543607042,
+      0.04255311147351157,
+      0.5201628717083505,
+      -1.0194313592664286,
+      0.0,
+      -0.8656568882082872
+    ],
+    [
+      1.4926354830958526,
+      -0.4906682461772595,
+      -1.0350983167455052,
+      0.8666857803828691,
+      -0.6967841380482345,
+      1.1940069556804662,
+      0.8064802635890113,
+      -0.33339205290586726,
+      0.0,
+      -0.055257418898025504
+    ],
+    [
+      1.8614581527374725,
+      -0.25989852900321814,
+      -0.5878426708844104,
+      -0.22245047376694074,
+      0.8273219335739653,
+      -0.3853751172216927,
+      -0.20600407504935123,
+      0.497414821814756,
+      0.0,
+      0.4812957290138783
+    ],
+    [
+      0.7623023124400965,
+      2.74187489243283,
+      -0.7271129656715768,
+      -0.49574531585216475,
+      -0.11213763186471973,
+      -0.5709197928846532,
+      -0.3502087114443708,
+      -0.6747644761201577,
+      0.0,
+      -0.327809481565141
+    ],
+    [
+      -1.5114505408616317,
+      -0.4987036587788392,
+      -1.8270249478361895,
+      -0.41763493226839576,
+      0.5909324825876744,
+      -0.36921199288101586,
+      -0.3316547969170518,
+      1.1261623745370029,
+      0.0,
+      -0.720397136467895
+    ],
+    [
+      -1.116942122167055,
+      -0.43271657396518415,
+      1.2573325100246664,
+      -0.15363266316886076,
+      0.29971759355838945,
+      -1.019966663446547,
+      0.10914448567011938,
+      -0.8697933370718401,
+      0.0,
+      1.0833834000154476
+    ]
+  ],
+  "bias": [
+    -1.4127095713458377,
+    -1.6823949451196287,
+    2.246173328966681,
+    -0.8446780593381744,
+    -0.6355377328164843,
+    0.6152741367295805,
+    1.248396711289998,
+    0.4654761316338625
+  ],
+  "selected_questions": [
+    "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+    "Does the ticket state or imply that the customer has already received an item or order?",
+    "Does the customer's request include canceling, returning, or removing an order or item (including as an alternative option)?",
+    "Does the customer ask to change their account or user address?",
+    "Does the text mention items that have already been received?",
+    "Does the ticket refer to an order that is pending or has just been placed?"
+  ],
+  "trajectory": [
+    0.1917,
+    0.377,
+    0.4722,
+    0.5238,
+    0.6057,
+    0.6183,
+    0.6453
+  ]
+}

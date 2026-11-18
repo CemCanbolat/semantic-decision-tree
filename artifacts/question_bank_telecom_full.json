@@ -1,0 +1,128 @@
+{
+  "questions": {
+    "c046c8aa9d7a3a75": {
+      "text": "What is the primary network symptom described by the customer?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:51:03Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "Mobile data is slow or cutting out",
+        "o1": "Device displays a complete No Service error",
+        "o2": "Other network issue"
+      },
+      "rubric": null
+    },
+    "a139e3e2fd5ce0ee": {
+      "text": "Is the user currently traveling internationally or outside their primary network coverage area?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:51:03Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "89dba8cc034af01c": {
+      "text": "Is the customer currently traveling outside their carrier's primary home network area or roaming abroad?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T13:51:03Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "e943e956d95b4a21": {
+      "text": "Does the customer report seeing a \"No Service\" notification or complete loss of cellular network signal?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "147ddcd6238bea49": {
+      "text": "Does the user report seeing a 'No Service' status on their phone?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "42f9aa92994d0268": {
+      "text": "Does the recommended resolution require toggling cellular data roaming settings on the device?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "32353a2bcf79e4a4": {
+      "text": "Does the complaint specifically involve the use of a messaging application?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "2e4e2f33c82f36af": {
+      "text": "Does the ticket indicate that the user is currently traveling or connected outside of their home network coverage area?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "06fda376508e7115": {
+      "text": "Is the customer currently traveling internationally or located outside their home network area?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "7aafb376cab408e8": {
+      "text": "Does the inquiry specifically mention degraded mobile data speed?",
+      "criteria": null,
+      "provenance": "ovr:reseat_sim_card",
+      "runs": [
+        "iter12"
+      ],
+      "first_seen": "2026-11-15T16:38:52Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    }
+  }
+}

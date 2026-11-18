@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-11-14T03:10:28Z",
+  "bank_summary": {
+    "n_questions": 29,
+    "with_criteria": 7,
+    "runs": [
+      "induced_v1",
+      "induced_v3",
+      "induced_v3_criteria",
+      "induced_v4",
+      "ms0_20261114_025810",
+      "ms1_20261114_025810",
+      "ms2_20261114_025810"
+    ]
+  },
+  "n_features": 33,
+  "cv_accuracy": 0.6491,
+  "cv_macro_f1": 0.5178,
+  "temperature": 0.9401,
+  "coverage_at_0.97": {
+    "target_precision": 0.97,
+    "coverage": 0.0614,
+    "precision": 1.0,
+    "threshold": 0.9
+  },
+  "per_class_recall": {
+    "auto_approve": "20/27",
+    "cancel_order": "5/10",
+    "escalate": "0/4",
+    "exchange": "21/26",
+    "modify_order": "21/34",
+    "modify_user": "5/6",
+    "out_of_scope": "2/2",
+    "politely_deny": "0/5"
+  },
+  "best_feature_set": "bank"
+}

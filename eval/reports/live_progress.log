@@ -1,0 +1,4217 @@
+[2026-11-14T01:09:16Z] live pipeline started (pid 958655)
+[2026-11-14T01:09:16Z] key present (length not logged)
+[2026-11-14T01:09:16Z] stage 1/2: smoke test
+latency_ms 247.34
+ 0.022  Does the user request cancellation of a pending order?
+ 0.010  Does the user request an exchange of items for a different variant of the same product?
+ 0.000  Is the referenced order status pending?
+ 0.851  Does the user provide the order id or enough details to identify the order in question?
+ 0.964  Does the user request a concrete account or order action rather than only asking for information?
+ 0.710  Does the user request a return or refund of items from the order?
+ 0.966  Does the request concern a specific order rather than the user profile or account settings?
+ 0.019  Does the user request a modification of the pending order such as address, payment, or item options?
+ 0.393  Is the request within the agent scope so that no transfer to a human agent is required?
+ 1.000  Is the referenced order status delivered?
+[2026-11-14T01:09:17Z] stage 1/2: live baseline (114 tickets)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/eval/run_baselines.py", line 88, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/eval/run_baselines.py", line 69, in main
+    soft = run_b2_soft(client, examples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/eval/baselines.py", line 114, in run_b2_soft
+    vectors = _score_all(client, examples, questions)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/eval/baselines.py", line 97, in _score_all
+    sv = client.score_batch(ex.text, ex.context, questions)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/gemini_decision_client.py", line 109, in score_batch
+    payload = self._post_with_retry(headers, body)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/gemini_decision_client.py", line 127, in _post_with_retry
+    status, raw = self.transport(self.endpoint, headers, body)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/gemini_decision_client.py", line 42, in _urllib_transport
+    with urllib.request.urlopen(req, timeout=60) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 1352, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/lib/python3.11/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1278, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ssl.py", line 1134, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+[2026-11-14T01:09:47Z] live pipeline started (pid 959050)
+[2026-11-14T01:09:47Z] ERROR: GEMINI_API_KEY is not set in this shell
+[2026-11-14T01:10:02Z] live pipeline started (pid 959234)
+[2026-11-14T01:10:02Z] ERROR: GEMINI_API_KEY is not set in this shell
+[2026-11-14T01:13:46Z] live pipeline started (pid 962245)
+[2026-11-14T01:13:46Z] key loaded from .env
+[2026-11-14T01:13:46Z] key present (length not logged)
+[2026-11-14T01:13:46Z] stage 1/2: smoke test
+latency_ms 237.801
+ 0.022  Does the user request cancellation of a pending order?
+ 0.010  Does the user request an exchange of items for a different variant of the same product?
+ 0.000  Is the referenced order status pending?
+ 0.851  Does the user provide the order id or enough details to identify the order in question?
+ 0.964  Does the user request a concrete account or order action rather than only asking for information?
+ 0.710  Does the user request a return or refund of items from the order?
+ 0.966  Does the request concern a specific order rather than the user profile or account settings?
+ 0.019  Does the user request a modification of the pending order such as address, payment, or item options?
+ 0.393  Is the request within the agent scope so that no transfer to a human agent is required?
+ 1.000  Is the referenced order status delivered?
+[2026-11-14T01:13:46Z] stage 1/2: live baseline (114 tickets)
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+B2_hand_tree_soft acc 0.1754 macro_f1 0.1928 cov@0.97 {'target_precision': 0.97, 'coverage': 0.0263, 'precision': 1.0, 'threshold': 0.75}
+B2_hand_tree_hard acc 0.2105 macro_f1 0.2977 cov@0.97 None
+report -> eval/reports/m1_tau2_live.json
+[2026-11-14T01:14:29Z] stage 1/2: baseline report written
+[2026-11-14T01:14:29Z] stage 2/2: live induction
+Traceback (most recent call last):
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 63, in complete
+    with urllib.request.urlopen(req, timeout=60) as resp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 120, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 93, in main
+    tree = inducer.induce(examples, tree_id="induced_" + time.strftime("%Y%m%d_%H%M%S"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 182, in induce
+    root = self._grow(examples, 0)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 139, in _grow
+    candidates = self._propose(examples)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 116, in _propose
+    raw = self.frontier.complete(system, user)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 66, in complete
+    raise SdtError("frontier HTTP %d: %s" % (e.code, e.read()[:300].decode("utf-8", "replace")))
+sdt.schemas.SdtError: frontier HTTP 400: {
+  "error": {
+    "code": 400,
+    "message": "Invalid JSON payload received. Unknown name \"type\" at 'system_instruction.parts[0]': Cannot find field.\nInvalid JSON payload received. Unknown name \"type\" at 'contents[0].parts[0]': Cannot find field.",
+    "status": "INVALID_ARGUMENT",
+    "detai
+[2026-11-14T01:14:29Z] induction failed
+[2026-11-14T01:17:16Z] live pipeline started (pid 965127)
+[2026-11-14T01:17:16Z] key loaded from .env
+[2026-11-14T01:17:16Z] key present (length not logged)
+[2026-11-14T01:17:16Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T01:17:16Z] stage 2/2: live induction
+[induction] depth 0 picked: Does the ticket request modifying, changing, or upgrading an item or order without mentioning the word "return"? (ig 0.433, cert 0.697)
+[induction] depth 1 picked: Does the ticket mention the word "modify", "upgrade", or "change"? (ig 0.438, cert 0.625)
+[induction] depth 2 picked: Does the ticket text make no mention of the word "cancel" or "cancellation"? (ig 0.435, cert 0.708)
+[induction] depth 3 picked: Does the ticket contain inquiries or modification requests regarding an item or order without asking to update a Washington DC address or 101 Highway address? (ig 0.327, cert 0.763)
+[induction] depth 3 picked: Does the ticket instruct to cancel the entire order or whole order if an issue arises or if an item/option is unavailable? (ig 0.470, cert 0.863)
+[induction] depth 2 picked: Does the text mention exchanging more than one item or product? (ig 0.177, cert 0.776)
+[induction] depth 3 picked: Does the ticket indicate that an item was already received or tried by the customer? (ig 0.521, cert 0.817)
+[induction] depth 1 picked: Does the text contain the word "cancel" or "pending"? (ig 0.390, cert 0.574)
+[induction] depth 2 picked: Does the ticket mention that an item was damaged, lost, or does not work properly? (ig 0.191, cert 0.940)
+[induction] depth 3 picked: Does the ticket mention wanting to return or exchange more than one item, or returning items from more than one order? (ig 0.272, cert 0.802)
+[induction] depth 2 picked: Does the text mention excluding, keeping, or not returning at least one specific item (such as a keyboard, mouse, or coffee machine)? (ig 0.079, cert 0.637)
+[induction] depth 3 picked: Does the text mention a water bottle, an air purifier, or gaming? (ig 0.224, cert 0.851)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 122, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/induction/run_induction.py", line 95, in main
+    tree = inducer.induce(examples, tree_id="induced_" + time.strftime("%Y%m%d_%H%M%S"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 185, in induce
+    pruned = self._prune(tree)
+             ^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 220, in _prune
+    collapse(tree.root)
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 214, in collapse
+    collapse(node.child_no)
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 214, in collapse
+    collapse(node.child_no)
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 214, in collapse
+    collapse(node.child_no)
+  File "/home/Cem/semantic-decision-tree/sdt/induction/grow.py", line 218, in collapse
+    pruned += 1
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'pruned' where it is not associated with a value
+[2026-11-14T01:21:04Z] induction failed
+[2026-11-14T01:23:27Z] live pipeline started (pid 969907)
+[2026-11-14T01:23:27Z] key loaded from .env
+[2026-11-14T01:23:27Z] key present (length not logged)
+[2026-11-14T01:23:27Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T01:23:27Z] stage 2/2: live induction
+[induction] depth 0 picked: Does the text omit any mention of "return" or "cancel"? (ig 0.469, cert 0.461)
+[induction] depth 1 picked: Does the ticket mention modifying an order or changing an existing order detail? (ig 0.284, cert 0.793)
+[induction] depth 2 picked: Does the text contain the word "modify", "change", or "upgrade"? (ig 0.443, cert 0.475)
+[induction] depth 2 picked: Does the text explicitly mention wanting to exchange an item or get a new pair or different size of a product? (ig 0.954, cert 0.900)
+[induction] depth 1 picked: Does the ticket mention a preference regarding the refund or payment method (such as PayPal, original payment, or refunding to a specific payment method)? (ig 0.081, cert 0.859)
+[induction] depth 2 picked: Does the ticket mention a specific product such as a tablet, camera, air purifier, luggage, or skateboard? (ig 0.277, cert 0.748)
+[induction] depth 3 picked: Does the ticket text mention an air purifier, a camera, or a tablet? (ig 0.161, cert 0.789)
+[induction] depth 2 picked: Does the customer explicitly state an intention or request to return at least one item? (ig 0.592, cert 0.772)
+[induction] depth 3 picked: Does the reason for contact mention the word "cancel"? (ig 0.237, cert 0.834)
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+induced in 193.4s: 19 nodes, 9 questions, 12 leaves (pruned 2)
+frontier calls: 12 | scorer calls: 443 | cache hits: 0
+corpus: 114 examples | accuracy 0.6667 | macro_f1 0.4555 | cov@0.97 null
+  depth 0 q: Does the text omit any mention of "return" or "cancel"? (ig 0.469, cert 0.461)
+  depth 1 q: Does the ticket mention modifying an order or changing an existing order detail? (ig 0.284, cert 0.793)
+  depth 2 q: Does the text contain the word "modify", "change", or "upgrade"? (ig 0.443, cert 0.475)
+  depth 2 q: Does the text explicitly mention wanting to exchange an item or get a new pair or different size of a product? (ig 0.954, cert 0.900)
+  depth 1 q: Does the ticket mention a preference regarding the refund or payment method (such as PayPal, original payment, or refunding to a specific payment method)? (ig 0.081, cert 0.859)
+  depth 2 q: Does the ticket mention a specific product such as a tablet, camera, air purifier, luggage, or skateboard? (ig 0.277, cert 0.748)
+  depth 3 q: Does the ticket text mention an air purifier, a camera, or a tablet? (ig 0.161, cert 0.789)
+  depth 2 q: Does the customer explicitly state an intention or request to return at least one item? (ig 0.592, cert 0.772)
+  depth 3 q: Does the reason for contact mention the word "cancel"? (ig 0.237, cert 0.834)
+tree -> artifacts/trees/induced_v1.json
+[2026-11-14T01:26:40Z] stage 2/2: induced tree written
+[2026-11-14T01:26:40Z] live pipeline COMPLETE
+[2026-11-14T01:48:45Z] live pipeline started (pid 988718)
+[2026-11-14T01:48:45Z] key loaded from .env
+[2026-11-14T01:48:45Z] key present (length not logged)
+[2026-11-14T01:48:45Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T01:48:45Z] stage 2/2: live induction
+[induction] depth 0 picked: Does the text mention cancelling the whole order or order cancellation? (ig 0.342, cert 0.812)
+[induction] depth 1 picked: Does the ticket mention cancelling the entire or whole order if an alternative action is not possible or available? (ig 0.467, cert 0.665)
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+induced in 158.0s: 5 nodes, 2 questions, 3 leaves (pruned 0)
+frontier calls: 11 | scorer calls: 237 | cache hits: 135
+corpus: 114 examples | accuracy 0.3509 | macro_f1 0.1596 | cov@0.97 null
+  depth 0 q: Does the text mention cancelling the whole order or order cancellation? (ig 0.342, cert 0.812)
+  depth 1 q: Does the ticket mention cancelling the entire or whole order if an alternative action is not possible or available? (ig 0.467, cert 0.665)
+candidates considered: 35 (rejected-by-validation-or-baseline: 17)
+candidates log -> artifacts/trees/induced_v2.candidates.json
+tree -> artifacts/trees/induced_v2.json
+[2026-11-14T01:51:23Z] stage 2/2: induced tree written
+[2026-11-14T01:51:23Z] live pipeline COMPLETE
+[2026-11-14T01:54:16Z] live pipeline started (pid 993025)
+[2026-11-14T01:54:16Z] key loaded from .env
+[2026-11-14T01:54:16Z] key present (length not logged)
+[2026-11-14T01:54:16Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T01:54:16Z] stage 2/2: live induction
+[induction] depth 0 picked: Does the customer ask to exchange an item for a different size, color, or version? (ig 0.523, cert 0.831)
+[induction] depth 1 picked: Does the customer mention more than one order or an additional order? (ig 0.104, cert 0.684)
+[induction] depth 2 picked: Does the ticket refer to an order as being pending, just placed, or not yet shipped? (ig 0.629, cert 0.703)
+[induction] depth 3 picked: Does the ticket state or imply that the customer has already received an item or order? (ig 0.895, cert 0.829)
+[induction] depth 1 picked: Does the user ask to make changes or modifications to an order or its payment? (ig 0.677, cert 0.663)
+[induction] depth 2 picked: Does the ticket mention a specific city or geographic location? (ig 0.529, cert 0.627)
+[induction] depth 3 picked: Does the text state that the customer wants to return one or more items? (ig 0.968, cert 0.881)
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+induced in 310.7s: 15 nodes, 7 questions, 8 leaves (pruned 0)
+frontier calls: 23 | scorer calls: 402 | cache hits: 713
+corpus: 114 examples | accuracy 0.6491 | macro_f1 0.3982 | cov@0.97 null
+  depth 0 q: Does the customer ask to exchange an item for a different size, color, or version? (ig 0.523, cert 0.831)
+  depth 1 q: Does the customer mention more than one order or an additional order? (ig 0.104, cert 0.684)
+  depth 2 q: Does the ticket refer to an order as being pending, just placed, or not yet shipped? (ig 0.629, cert 0.703)
+  depth 3 q: Does the ticket state or imply that the customer has already received an item or order? (ig 0.895, cert 0.829)
+  depth 1 q: Does the user ask to make changes or modifications to an order or its payment? (ig 0.677, cert 0.663)
+  depth 2 q: Does the ticket mention a specific city or geographic location? (ig 0.529, cert 0.627)
+  depth 3 q: Does the text state that the customer wants to return one or more items? (ig 0.968, cert 0.881)
+candidates considered: 73 (rejected-by-validation-or-baseline: 32)
+candidates log -> artifacts/trees/induced_v3.candidates.json
+tree -> artifacts/trees/induced_v3.json
+[2026-11-14T01:59:27Z] stage 2/2: induced tree written
+[2026-11-14T01:59:27Z] live pipeline COMPLETE
+[2026-11-14T02:18:12Z] live pipeline started (pid 1010756)
+[2026-11-14T02:18:12Z] key loaded from .env
+[2026-11-14T02:18:12Z] key present (length not logged)
+[2026-11-14T02:18:12Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T02:18:12Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T02:18:12Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T02:18:12Z] live pipeline COMPLETE
+[2026-11-14T02:20:54Z] live pipeline started (pid 1013033)
+[2026-11-14T02:20:54Z] key loaded from .env
+[2026-11-14T02:20:54Z] key present (length not logged)
+[2026-11-14T02:20:54Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T02:20:54Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T02:20:54Z] stage 3/3: cache backfill + combiner
+  backfilled 20/114 examples
+  backfilled 40/114 examples
+  backfilled 60/114 examples
+  backfilled 80/114 examples
+  backfilled 100/114 examples
+feature pool: 16 semantic questions x 114 examples | missing pairs: 1080
+done: 114 examples scored in 22.9s (one batch call each); cache saved
+v3_semantic_plus_computed      features 11 | cv acc 0.6228 | cv macro_f1 0.4913 | T 0.71 | cov@0.97 {"target_precision": 0.97, "coverage": 0.1053, "precision": 1.0, "threshold": 0.75}
+v3_plus_v1_plus_computed       features 20 | cv acc 0.6579 | cv macro_f1 0.4876 | T 0.82 | cov@0.97 {"target_precision": 0.97, "coverage": 0.0526, "precision": 1.0, "threshold": 0.85}
+final model -> eval/reports/combiner_model.json
+report -> eval/reports/iteration3_combiner.json
+[2026-11-14T02:21:52Z] stage 3/3: combiner report written
+[2026-11-14T02:21:52Z] live pipeline COMPLETE
+[2026-11-14T02:32:41Z] live pipeline started (pid 1022024)
+[2026-11-14T02:32:41Z] key loaded from .env
+[2026-11-14T02:32:41Z] key present (length not logged)
+[2026-11-14T02:32:41Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T02:32:41Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T02:32:41Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T02:32:41Z] stage 4/4: criteria pass (generate, re-score, A/B combiner)
+criteria generated for 7/7 questions
+tree -> artifacts/trees/induced_v3_criteria.json
+criteria log -> artifacts/trees/induced_v3_criteria.criteria_log.json
+  backfilled 20/114 examples
+  backfilled 40/114 examples
+  backfilled 60/114 examples
+  backfilled 80/114 examples
+  backfilled 100/114 examples
+feature pool: 7 semantic questions x 114 examples | missing pairs: 798
+done: 114 examples scored in 22.3s (one batch call each); cache saved
+induced_v3_criteria_plus_computed features 11 | cv acc 0.5614 | cv macro_f1 0.4321 | T 0.82 | cov@0.97 {"target_precision": 0.97, "coverage": 0.1404, "precision": 1.0, "threshold": 0.7}
+final model -> eval/reports/combiner_model.json
+report -> eval/reports/iteration4_criteria.json
+[2026-11-14T02:34:14Z] stage 4/4: criteria report written
+[2026-11-14T02:34:14Z] live pipeline COMPLETE
+[2026-11-14T02:45:44Z] live pipeline started (pid 1031977)
+[2026-11-14T02:45:44Z] key loaded from .env
+[2026-11-14T02:45:44Z] key present (length not logged)
+[2026-11-14T02:45:44Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T02:45:44Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T02:45:44Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T02:45:44Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T02:45:44Z] stage 5/5: fresh induction v4 (computed seeds in pool) + backfill + combiner
+[induction] depth 0 picked: Does the ticket mention changing the size, color, or specifications of an item? (ig 0.534, cert 0.869)
+[induction] depth 1 picked: Does the ticket refer to an order that is pending or has just been placed? (ig 0.755, cert 0.843)
+[induction] depth 1 picked: Does the ticket mention updating, modifying, or changing an address? (ig 0.649, cert 0.948)
+[induction] depth 2 picked: Is the referenced order status pending? (ig 0.801, cert 1.000)
+  scored 10/114
+  scored 20/114
+  scored 30/114
+  scored 40/114
+  scored 50/114
+  scored 60/114
+  scored 70/114
+  scored 80/114
+  scored 90/114
+  scored 100/114
+  scored 110/114
+  scored 114/114
+induced in 251.1s: 9 nodes, 4 questions, 5 leaves (pruned 0)
+frontier calls: 19 | scorer calls: 338 | cache hits: 1725
+corpus: 114 examples | accuracy 0.6579 | macro_f1 0.4001 | cov@0.97 null
+  depth 0 q: Does the ticket mention changing the size, color, or specifications of an item? (ig 0.534, cert 0.869)
+  depth 1 q: Does the ticket refer to an order that is pending or has just been placed? (ig 0.755, cert 0.843)
+  depth 1 q: Does the ticket mention updating, modifying, or changing an address? (ig 0.649, cert 0.948)
+  depth 2 q: Is the referenced order status pending? (ig 0.801, cert 1.000)
+candidates considered: 79 (rejected-by-validation-or-baseline: 38)
+candidates log -> artifacts/trees/induced_v4.candidates.json
+tree -> artifacts/trees/induced_v4.json
+  backfilled 20/114 examples
+  backfilled 40/114 examples
+  backfilled 60/114 examples
+  backfilled 80/114 examples
+  backfilled 100/114 examples
+feature pool: 3 semantic questions x 114 examples | missing pairs: 114
+done: 114 examples scored in 19.2s (one batch call each); cache saved
+induced_v4_plus_computed       features  8 | cv acc 0.4825 | cv macro_f1 0.4092 | T 0.82 | cov@0.97 null
+final model -> eval/reports/combiner_model.json
+report -> eval/reports/iteration5_fresh.json
+[2026-11-14T02:50:29Z] stage 5/5: fresh-run report written
+[2026-11-14T02:50:29Z] live pipeline COMPLETE
+[2026-11-14T02:58:10Z] live pipeline started (pid 1041372)
+[2026-11-14T02:58:10Z] key loaded from .env
+[2026-11-14T02:58:10Z] key present (length not logged)
+[2026-11-14T02:58:10Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T02:58:10Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T02:58:10Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T02:58:10Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T02:58:10Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-14T02:58:10Z] stage 6/6: multi-seed induction (3 trees) + bank combiner
+[induction] depth 0 picked: Does the customer ask to modify or change an attribute of a pending order? (ig 0.570, cert 0.752)
+[induction] depth 1 picked: Does the text mention items that have already been received? (ig 0.666, cert 0.783)
+[induction] depth 1 picked: Is the referenced order status pending? (ig 0.783, cert 1.000)
+[induction] depth 2 picked: Does the ticket describe a request to replace an item with one that has different specifications, dimensions, or capacity (such as zoom, size, pressure, brightness, or processor specs)? (ig 0.587, cert 0.826)
+[multi 1/3 seed 11] 4 questions 6 leaves | bank +3 -> 22 | 224s
+[induction] depth 0 picked: Does the customer request to update, change, or modify an address? (ig 0.498, cert 0.939)
+[induction] depth 1 picked: Is the referenced order status pending? (ig 0.596, cert 1.000)
+[induction] depth 2 picked: Does the customer express a preference for a different size or capacity of an item (such as medium, bigger, or maximum size)? (ig 0.695, cert 0.859)
+[induction] depth 3 picked: Does the ticket mention wanting a refund? (ig 0.176, cert 0.750)
+[multi 2/3 seed 12] 4 questions 5 leaves | bank +3 -> 25 | 211s
+[induction] depth 0 picked: Does the customer ask to change their account or user address? (ig 0.520, cert 0.930)
+[induction] depth 1 picked: Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)? (ig 0.552, cert 0.809)
+[induction] depth 2 picked: Does the account hold a gift card? (ig 0.410, cert 1.000)
+[induction] depth 3 picked: Does the ticket state that the customer has already received an item? (ig 0.431, cert 0.672)
+[induction] depth 2 picked: Is the referenced order status pending? (ig 0.777, cert 1.000)
+[induction] depth 3 picked: Does the text mention that an item was received? (ig 0.812, cert 0.478)
+[multi 3/3 seed 13] 6 questions 9 leaves | bank +4 -> 29 | 262s
+bank: artifacts/question_bank.json | 29 questions | runs: induced_v3_criteria,induced_v4,ms0_20261114_025810,ms1_20261114_025810,ms2_20261114_025810
+bank: 29 semantic questions | missing score pairs: 415
+backfilled 114 examples
+bank combiner: features 33 | cv acc 0.6491 | cv macro_f1 0.5178 | T 0.94 | cov@0.97 {"target_precision": 0.97, "coverage": 0.0614, "precision": 1.0, "threshold": 0.9}
+per-class: {"auto_approve": "20/27", "cancel_order": "5/10", "escalate": "0/4", "exchange": "21/26", "modify_order": "21/34", "modify_user": "5/6", "out_of_scope": "2/2", "politely_deny": "0/5"}
+report -> eval/reports/iteration6_bank.json | model -> eval/reports/bank_model.json
+[2026-11-14T03:10:28Z] stage 6/6: bank report written
+[2026-11-14T03:10:28Z] live pipeline COMPLETE
+[2026-11-14T10:43:18Z] live pipeline started (pid 1379545)
+[2026-11-14T10:43:18Z] key loaded from .env
+[2026-11-14T10:43:18Z] key present (length not logged)
+[2026-11-14T10:43:18Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T10:43:18Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T10:43:18Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T10:43:18Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T10:43:18Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-14T10:43:18Z] stage 6/6: bank report already present, skipping
+[2026-11-14T10:43:18Z] stage 7/9: experiment A - one choice + one score, non-binary tree
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/exp_a_constrained.py", line 152, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/exp_a_constrained.py", line 85, in main
+    rubric = design_rubric(frontier, examples)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/exp_a_constrained.py", line 64, in design_rubric
+    return parse_json_object(frontier.complete(system, user))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/common.py", line 25, in parse_json_object
+    return json.loads(strip_fences(raw))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 4 column 3 (char 162)
+[2026-11-14T10:43:39Z] experiment A failed
+[2026-11-14T11:18:23Z] live pipeline started (pid 1405510)
+[2026-11-14T11:18:23Z] key loaded from .env
+[2026-11-14T11:18:23Z] key present (length not logged)
+[2026-11-14T11:18:23Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T11:18:23Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T11:18:23Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T11:18:23Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T11:18:23Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-14T11:18:23Z] stage 6/6: bank report already present, skipping
+[2026-11-14T11:18:23Z] stage 7/9: experiment A - one choice + one score, non-binary tree
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+[warn] JSON parsing failed 3 times (no parseable JSON in frontier output: '{\n"auto_approve": "Straightforward return or exchange requests eligible for instant automated processing without requi); using fallback
+choice options: ['auto_approve', 'cancel_order', 'escalate', 'exchange', 'modify_order', 'modify_user', 'out_of_scope', 'politely_deny']
+rubric: ['Single order exchange request referencing specific replacement preferences and an order ID.', 'Multi-item exchange request requiring multiple replacements without an order ID.', 'Compound inquiry combining store inventory questions with order returns or modifications.']
+scored 114 examples (73s)
+tree: acc 0.3860 f1 0.3580 leaves 16 | combiner: acc 0.5877 f1 0.5006 T 0.71
+report -> eval/reports/expA_choice_score.json
+[2026-11-14T11:19:44Z] stage 8/9: experiment B - free-type induction (noul/choice/score)
+[expB] depth 1 noul: Does the request mention modifying a pending or unfulfilled order? (score 0.612)
+[expB] depth 0 choice: Which post-purchase resolution is primarily sought? (score 0.658)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/exp_b_free.py", line 316, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/exp_b_free.py", line 292, in main
+    X, names = build_features(examples, questions, cache, include_computed=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/training/combiner.py", line 61, in build_features
+    raise ValueError("cache missing %d (question, example) scores for the requested feature set" % missing)
+ValueError: cache missing 46 (question, example) scores for the requested feature set
+tree: 6 nodes 4 leaves 2 questions (5 frontier calls, 102s)
+[2026-11-14T11:21:26Z] experiment B failed
+[2026-11-14T23:28:34Z] live pipeline started (pid 1933690)
+[2026-11-14T23:28:34Z] key loaded from .env
+[2026-11-14T23:28:34Z] key present (length not logged)
+[2026-11-14T23:28:34Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T23:28:34Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T23:28:34Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T23:28:34Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T23:28:34Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-14T23:28:34Z] stage 6/6: bank report already present, skipping
+[2026-11-14T23:28:34Z] stage 7/9: experiment A already present, skipping
+[2026-11-14T23:28:34Z] stage 8/9: experiment B - free-type induction (noul/choice/score)
+[expB] depth 1 noul: Does the customer ask about an order that is pending, not yet delivere (score 0.804)
+[expB] depth 1 noul: Does the customer explicitly mention being frustrated or in a bad mood (score 0.097)
+[expB] depth 1 noul: Does the customer request assistance regarding a physical delivery or  (score 0.718)
+[expB] depth 0 choice: What is the primary adjustment sought regarding order items? (score 0.786)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+tree: 10 nodes 6 leaves 4 questions (7 frontier calls, 177s)
+tree: acc 0.7018 f1 0.5277 | combiner: acc 0.5263 f1 0.4496 | types {"choice": 1, "noul": 3}
+report -> eval/reports/expB_free_types.json
+[2026-11-14T23:31:36Z] stage 9/9: experiment C - paraphrase ensemble
+paraphrases written: 10 for 5 originals
+scored 114 examples (28s)
+originals:    acc 0.6754 f1 0.5903
+with paraphr: acc 0.6754 f1 0.5894 T 0.82
+report -> eval/reports/expC_paraphrase.json
+[2026-11-14T23:32:46Z] live pipeline COMPLETE
+[2026-11-14T23:59:06Z] live pipeline started (pid 1956298)
+[2026-11-14T23:59:06Z] key loaded from .env
+[2026-11-14T23:59:06Z] key present (length not logged)
+[2026-11-14T23:59:06Z] stage 1/2: baseline report already present, skipping
+[2026-11-14T23:59:06Z] stage 2/2: induced tree already present, skipping
+[2026-11-14T23:59:06Z] stage 3/3: combiner report already present, skipping
+[2026-11-14T23:59:06Z] stage 4/4: criteria report already present, skipping
+[2026-11-14T23:59:06Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-14T23:59:06Z] stage 6/6: bank report already present, skipping
+[2026-11-14T23:59:06Z] stage 7/9: experiment A already present, skipping
+[2026-11-14T23:59:06Z] stage 8/9: experiment B already present, skipping
+[2026-11-14T23:59:06Z] stage 9/9: experiment C already present, skipping
+[2026-11-14T23:59:06Z] stage 10/10: iteration 8 - deep soft trees, gain-ratio guarded, leakage-free pruning
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.257)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.047)
+[iter8] depth 2 noul: Does the customer request to update, change, or correct any details of (score 0.830)
+[iter8] depth 1 noul: Does the request mention cancelling an order or removing an item if a  (score 0.659)
+[iter8] depth 3 noul: Does the customer request a return or refund for any item? (score 0.074)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.299)
+[iter8] depth 3 noul: Is the referenced order status delivered? (score 0.370)
+[iter8] depth 2 noul: Does the contact request an update to the customer's personal address  (score 0.620)
+[iter8] depth 1 noul: Does the customer specify desired technical features, material, or siz (score 0.425)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.510)
+[fold 0] raw->pruned 21 nodes | test acc 0.3077 macro_f1 0.1107 (10 frontier calls)
+[iter8] depth 2 noul: Does the customer exclusively seek replacements or exchanges without r (score 0.154)
+[iter8] depth 1 noul: Does the customer specify desired features, attributes, or variants (s (score 0.571)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.304)
+[iter8] depth 2 noul: Is the referenced order status pending? (score 0.376)
+[iter8] depth 3 noul: Does the customer request a change, exchange, or modification to the i (score 0.597)
+[iter8] depth 2 noul: Does the customer request an update to their default address or user a (score 0.446)
+[iter8] depth 1 noul: Does the customer mention canceling an order or item, even as a condit (score 0.375)
+[iter8] depth 0 noul: Is the referenced order status delivered? (score 0.568)
+[fold 1] raw->pruned 17 nodes | test acc 0.2917 macro_f1 0.1158 (9 frontier calls)
+[iter8] depth 2 score: How many distinct items or products is the customer seeking to return, (score 0.274)
+[iter8] depth 1 noul: Does the account hold a gift card? (score 0.332)
+[iter8] depth 3 noul: Does the customer request to update the delivery address on an existin (score 0.092)
+[iter8] depth 2 noul: Does the customer request to exchange an item for a different size, co (score 0.344)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.509)
+[iter8] depth 1 noul: Is the referenced order status pending? (score 0.473)
+[iter8] depth 0 noul: Is the referenced order status delivered? (score 0.601)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/run_iteration8.py", line 177, in <module>
+    main()
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/run_iteration8.py", line 103, in main
+    pruned, questions, grower = run_fold(frontier, client, cache, train, test, f)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/run_iteration8.py", line 75, in run_fold
+    pruned = prune_by_validation(raw, questions, cache, prune_split)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/soft_grower.py", line 247, in prune_by_validation
+    best = tree_macro_f1(tree, questions, cache, prune_examples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/experiments/soft_grower.py", line 227, in tree_macro_f1
+    r = route(tree, ScoreVector(example_id=ex.example_id, scores=scores), by_qid)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Cem/semantic-decision-tree/sdt/routing/soft_tree.py", line 59, in route
+    raise SdtError("missing scores for question %s" % qid)
+sdt.schemas.SdtError: missing scores for question q_1e79c2f4b82f0b8e
+[2026-11-15T00:06:34Z] iteration 8 failed
+[2026-11-15T00:08:39Z] live pipeline started (pid 1963514)
+[2026-11-15T00:08:39Z] key loaded from .env
+[2026-11-15T00:08:39Z] key present (length not logged)
+[2026-11-15T00:08:39Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T00:08:39Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T00:08:39Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T00:08:39Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T00:08:39Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T00:08:39Z] stage 6/6: bank report already present, skipping
+[2026-11-15T00:08:39Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T00:08:39Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T00:08:39Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T00:08:39Z] stage 10/10: iteration 8 - deep soft trees, gain-ratio guarded, leakage-free pruning
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.251)
+[iter8] depth 2 noul: Does the inquiry involve changing the shipping destination, suite, or  (score 0.410)
+[iter8] depth 1 noul: Does the customer explicitly mention cancellation of an item or order  (score 0.586)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.356)
+[iter8] depth 3 noul: Is the referenced order status delivered? (score 0.420)
+[iter8] depth 2 noul: Does the customer request to update, verify, or change their shipping  (score 0.413)
+[iter8] depth 1 noul: Does the customer request an exchange specifying particular attributes (score 0.456)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.510)
+[fold 0] raw->pruned 17 nodes | test acc 0.6154 macro_f1 0.4710 (9 frontier calls)
+[iter8] depth 2 noul: Does the customer primarily request to swap an item for a different va (score 0.503)
+[iter8] depth 1 noul: Does the account hold a gift card? (score 0.506)
+[iter8] depth 3 noul: Is the referenced order status pending? (score 0.300)
+[iter8] depth 2 noul: Does the customer request to cancel, modify, or update items or shippi (score 0.250)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.545)
+[iter8] depth 2 noul: Does the customer ask to modify account-level settings or permanent pr (score 0.443)
+[iter8] depth 1 noul: Does the customer mention canceling an order or returning an item, eit (score 0.575)
+[iter8] depth 0 noul: Is the referenced order status delivered? (score 0.568)
+[fold 1] raw->pruned 17 nodes | test acc 0.3750 macro_f1 0.2634 (10 frontier calls)
+[iter8] depth 3 noul: Does the customer explicitly ask to exchange an item for a different v (score 0.528)
+[iter8] depth 2 choice: How many distinct product types does the customer's request involve? (score 0.191)
+[iter8] depth 1 noul: Does the account hold a gift card? (score 0.332)
+[iter8] depth 3 noul: Does the customer request to cancel one or more entire orders? (score 0.127)
+[iter8] depth 3 noul: Does the customer request to update or correct the shipping or deliver (score 0.293)
+[iter8] depth 2 noul: Does the customer request to completely or partially cancel an order? (score 0.346)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.509)
+[iter8] depth 1 noul: Is the referenced order status pending? (score 0.473)
+[iter8] depth 0 noul: Is the referenced order status delivered? (score 0.601)
+[fold 2] raw->pruned 17 nodes | test acc 0.4091 macro_f1 0.2158 (9 frontier calls)
+[iter8] depth 1 noul: Does the account hold a gift card? (score 0.364)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.350)
+[iter8] depth 2 noul: Is the referenced order status pending? (score 0.399)
+[iter8] depth 3 noul: Does the customer request to exchange or swap an item from an order? (score 0.520)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.238)
+[iter8] depth 1 noul: Does the customer request or mention the possibility of canceling an o (score 0.355)
+[iter8] depth 0 noul: Is the referenced order status delivered? (score 0.443)
+[fold 3] raw->pruned 15 nodes | test acc 0.5455 macro_f1 0.2842 (8 frontier calls)
+[iter8] depth 2 noul: Does the customer request an item exchange, address modification, or r (score 0.233)
+[iter8] depth 3 noul: Does the customer mention returning an item that has already been deli (score 0.380)
+[iter8] depth 2 noul: Does the customer request an update, exchange, or modification to an e (score 0.637)
+[iter8] depth 1 noul: Does the customer request to cancel one or more orders? (score 0.355)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.098)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.462)
+[iter8] depth 2 noul: Does the customer request to update, change, or verify an account or d (score 0.436)
+[iter8] depth 1 noul: Does the customer request an exchange specifying a particular product  (score 0.545)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.512)
+[fold 4] raw->pruned 19 nodes | test acc 0.5000 macro_f1 0.3425 (10 frontier calls)
+[iter8] depth 3 noul: Does the customer explicitly request to cancel one or more entire pend (score 0.182)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.191)
+[iter8] depth 2 noul: Does the customer ask to change the delivery address or shipping desti (score 0.349)
+[iter8] depth 1 noul: Does the customer's request include canceling, returning, or removing  (score 0.534)
+[iter8] depth 3 choice: What is the product scope of the customer's request? (score 0.058)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.210)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.262)
+[iter8] depth 2 noul: Does the customer ask to update, change, or check a delivery address o (score 0.530)
+[iter8] depth 1 noul: Does the customer specify desired product attributes (such as size, ma (score 0.548)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.529)
+OOF: acc 0.4912 | macro_f1 0.3154 | folds [0.471, 0.2634, 0.2158, 0.2842, 0.3425]
+per-class: {"auto_approve": "9/27", "cancel_order": "6/10", "escalate": "0/4", "exchange": "22/26", "modify_order": "16/34", "modify_user": "1/6", "out_of_scope": "2/2", "politely_deny": "0/5"}
+final tree: 19 nodes 10 leaves | {"noul": 7, "choice": 1}
+report -> eval/reports/iteration8_deep_soft.json | tree -> artifacts/trees/induced_iter8.json
+[2026-11-15T00:24:43Z] live pipeline COMPLETE
+[2026-11-15T12:03:29Z] live pipeline started (pid 2478796)
+[2026-11-15T12:03:29Z] key loaded from .env
+[2026-11-15T12:03:29Z] key present (length not logged)
+[2026-11-15T12:03:29Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T12:03:29Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T12:03:29Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T12:03:29Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T12:03:29Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T12:03:29Z] stage 6/6: bank report already present, skipping
+[2026-11-15T12:03:29Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T12:03:29Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T12:03:29Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T12:03:29Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T12:03:29Z] stage 11/11: iteration 9 - full upgrade kit on the full corpus, no CV fragmentation
+[iter8] depth 3 noul: Does the customer indicate an intent to cancel an entire order or all  (score 0.063)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.180)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.162)
+[iter8] depth 2 noul: Does the user express an intent to modify one or more pending orders? (score 0.807)
+[iter8] depth 1 noul: Does the customer explicitly mention cancellation (or cancelling an or (score 0.589)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.239)
+[iter8] depth 3 noul: Does the account hold a gift card? (score 0.187)
+[iter8] depth 2 choice: Which primary resolution does the customer seek for their merchandise? (score 0.413)
+[iter8] depth 3 noul: Does the customer mention experiencing a personal issue, such as a fin (score 0.935)
+[iter8] depth 2 noul: Does the customer's inquiry concern viewing, changing, or correcting a (score 0.658)
+[iter8] depth 1 noul: Is the referenced order status delivered? (score 0.277)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.451)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+grown: 26 nodes | 9 questions | uniform-collapsed 5
+tree (in-sample): acc 0.7281 f1 0.5809 | depth mean 1.5 max 4 | cov@0.97 null
+combiner CV: acc 0.6053 macro_f1 0.5105 T 0.82
+report -> eval/reports/iteration9_full_corpus.json | tree -> artifacts/trees/induced_iter9.json
+[2026-11-15T12:08:09Z] live pipeline COMPLETE
+[2026-11-15T13:14:31Z] live pipeline started (pid 2530847)
+[2026-11-15T13:14:31Z] key loaded from .env
+[2026-11-15T13:14:31Z] key present (length not logged)
+[2026-11-15T13:14:31Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T13:14:31Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T13:14:31Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T13:14:31Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T13:14:31Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T13:14:31Z] stage 6/6: bank report already present, skipping
+[2026-11-15T13:14:31Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T13:14:31Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T13:14:31Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T13:14:31Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T13:14:31Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T13:14:31Z] stage 12/14: airline - grow + bank + selection
+{
+  "generated_at": "2026-11-15T13:14:32Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "tau2_clone/tau2-bench/data/tau2/domains/airline",
+  "n_examples": 50,
+  "label_counts": {
+    "book_order": 8,
+    "cancel_order": 4,
+    "escalate": 1,
+    "modify_order": 14,
+    "out_of_scope": 4,
+    "politely_deny": 19
+  },
+  "split_counts": {
+    "test": 20,
+    "train": 30
+  },
+  "family_counts": {
+    "tau2:book_reservation": 8,
+    "tau2:cancel_reservation": 4,
+    "tau2:no_write_info_only": 4,
+    "tau2:no_write_refund_intent": 19,
+    "tau2:transfer_to_human_agents": 1,
+    "tau2:update_reservation_baggages": 5,
+    "tau2:update_reservation_flights": 8,
+    "tau2:update_reservation_passengers": 1
+  },
+  "ambiguous_tasks": 23,
+  "user_join_failures": 9,
+  "order_join_failures": 15,
+  "domain": "airline",
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}
+[iter8] depth 2 noul: Does the request include checking the balance of a gift card or certif (score 0.218)
+[iter8] depth 1 noul: Does the account hold a gift card? (score 0.491)
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.076)
+[iter8] depth 1 noul: Does the customer request cancellation of multiple reservations or all (score 0.267)
+[iter8] depth 0 choice: What is the primary nature of the customer's request? (score 0.322)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+grown: 13 nodes | 4 questions | uniform-collapsed 1
+tree (in-sample): acc 0.6800 f1 0.5188 | depth mean 1.6 max 3 | cov@0.97 null
+combiner CV: acc 0.6200 macro_f1 0.4706 T 1.08
+report -> eval/reports/crossdomain_airline_grow.json | tree -> artifacts/trees/induced_iter9.json
+baseline (computed only) macro_f1 0.0460 | 2 candidates admitted
+  eval r0 Does the customer request cancellation of multiple reserva macro_f1 0.1414
+  eval r0 Does the request include checking the balance of a gift ca macro_f1 0.1439
+ROUND 0 WINNER: Does the request include checking the balance of a gift ca macro_f1 0.1439
+  eval r1 Does the customer request cancellation of multiple reserva macro_f1 0.2600
+ROUND 1 WINNER: Does the customer request cancellation of multiple reserva macro_f1 0.2600
+selected system: features 6 | cv acc 0.3000 | cv macro_f1 0.2600 | T 1.89 | cov@0.97 null
+per-class: {"book_order": "4/8", "cancel_order": "2/4", "escalate": "0/1", "modify_order": "9/14", "out_of_scope": "0/4", "politely_deny": "0/19"}
+report -> eval/reports/crossdomain_airline.json | model -> eval/reports/crossdomain_airline_model.json
+[2026-11-15T13:16:28Z] stage 13/14: telecom_base - grow + bank + selection
+{
+  "generated_at": "2026-11-15T13:16:28Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "/tmp/tmp82ogq8yp",
+  "n_examples": 114,
+  "label_counts": {
+    "escalate": 20,
+    "grant_app_permission": 3,
+    "reboot_device": 3,
+    "refuel_data": 9,
+    "reseat_sim_card": 10,
+    "set_network_mode_preference": 1,
+    "toggle_data": 4,
+    "toggle_roaming": 64
+  },
+  "split_counts": {
+    "test": 40,
+    "train": 74
+  },
+  "family_counts": {
+    "tau2:enable_roaming": 21,
+    "tau2:grant_app_permission": 3,
+    "tau2:reboot_device": 3,
+    "tau2:refuel_data": 9,
+    "tau2:reseat_sim_card": 10,
+    "tau2:set_network_mode_preference": 1,
+    "tau2:toggle_data": 2,
+    "tau2:toggle_data_saver_mode": 2,
+    "tau2:toggle_roaming": 43,
+    "tau2:transfer_to_human_agents": 20
+  },
+  "ambiguous_tasks": 94,
+  "user_join_failures": 114,
+  "order_join_failures": 114,
+  "domain": "telecom",
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}
+[iter8] depth 2 noul: Have basic local troubleshooting steps, such as toggling airplane mode (score 0.064)
+[iter8] depth 1 noul: Has the user already attempted restarting their device during the curr (score 0.108)
+[iter8] depth 2 noul: Is the customer currently traveling outside their domestic network are (score 0.967)
+[iter8] depth 2 noul: Is the customer currently traveling outside their domestic network are (score 0.963)
+[iter8] depth 1 noul: Is the customer contacting specifically about an inability to send MMS (score 0.307)
+[iter8] depth 0 noul: Does the customer specifically state that their phone is displaying a  (score 0.733)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+grown: 13 nodes | 5 questions | uniform-collapsed 2
+tree (in-sample): acc 0.8158 f1 0.3604 | depth mean 1.4 max 3 | cov@0.97 null
+combiner CV: acc 0.7105 macro_f1 0.3161 T 0.54
+report -> eval/reports/crossdomain_telecom_base_grow.json | tree -> artifacts/trees/induced_iter9.json
+baseline (computed only) macro_f1 0.0395 | 5 candidates admitted
+  eval r0 Does the customer specifically state that their phone is d macro_f1 0.1596
+  eval r0 Is the customer currently traveling outside their domestic macro_f1 0.2805
+  eval r0 Is the customer contacting specifically about an inability macro_f1 0.0613
+  eval r0 Have basic local troubleshooting steps, such as toggling a macro_f1 0.1186
+  eval r0 Has the user already attempted restarting their device dur macro_f1 0.1268
+ROUND 0 WINNER: Is the customer currently traveling outside their domestic macro_f1 0.2805
+  eval r1 Does the customer specifically state that their phone is d macro_f1 0.2664
+  eval r1 Is the customer contacting specifically about an inability macro_f1 0.2343
+  eval r1 Have basic local troubleshooting steps, such as toggling a macro_f1 0.2959
+  eval r1 Has the user already attempted restarting their device dur macro_f1 0.2936
+ROUND 1 WINNER: Have basic local troubleshooting steps, such as toggling a macro_f1 0.2959
+  eval r2 Does the customer specifically state that their phone is d macro_f1 0.2664
+  eval r2 Is the customer contacting specifically about an inability macro_f1 0.2358
+  eval r2 Has the user already attempted restarting their device dur macro_f1 0.2959
+no candidate improves by > 0.003; selection done at macro_f1 0.2959
+SELECTED 2 questions:
+  - Is the customer currently traveling outside their domestic network area or abroad?
+  - Have basic local troubleshooting steps, such as toggling airplane mode, already been compl
+macro_f1 trajectory: [0.0395, 0.2805, 0.2959]
+selected system: features 6 | cv acc 0.7105 | cv macro_f1 0.2959 | T 0.41 | cov@0.97 {"target_precision": 0.97, "coverage": 0.5614, "precision": 1.0, "threshold": 0.9}
+per-class: {"escalate": "8/20", "grant_app_permission": "0/3", "reboot_device": "0/3", "refuel_data": "6/9", "reseat_sim_card": "3/10", "set_network_mode_preference": "0/1", "toggle_data": "0/4", "toggle_roaming": "64/64"}
+report -> eval/reports/crossdomain_telecom_base.json | model -> eval/reports/crossdomain_telecom_base_model.json
+[2026-11-15T13:21:01Z] stage 14/14: telecom_full - grow + bank + selection
+{
+  "generated_at": "2026-11-15T13:21:01Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "/tmp/tmpampwj43c",
+  "n_examples": 2285,
+  "label_counts": {
+    "disconnect_vpn": 4,
+    "escalate": 32,
+    "grant_app_permission": 48,
+    "reboot_device": 14,
+    "refuel_data": 156,
+    "reseat_sim_card": 256,
+    "set_network_mode_preference": 4,
+    "toggle_airplane_mode": 1,
+    "toggle_data": 86,
+    "toggle_roaming": 1680,
+    "toggle_wifi_calling": 4
+  },
+  "split_counts": {
+    "full": 2151,
+    "small": 20,
+    "test": 40,
+    "train": 74
+  },
+  "family_counts": {
+    "tau2:disconnect_vpn": 4,
+    "tau2:enable_roaming": 560,
+    "tau2:grant_app_permission": 48,
+    "tau2:reboot_device": 14,
+    "tau2:refuel_data": 156,
+    "tau2:reseat_sim_card": 256,
+    "tau2:set_network_mode_preference": 4,
+    "tau2:toggle_airplane_mode": 1,
+    "tau2:toggle_data": 70,
+    "tau2:toggle_data_saver_mode": 16,
+    "tau2:toggle_roaming": 1120,
+    "tau2:toggle_wifi_calling": 4,
+    "tau2:transfer_to_human_agents": 32
+  },
+  "ambiguous_tasks": 2237,
+  "user_join_failures": 2285,
+  "order_join_failures": 2285,
+  "domain": "telecom",
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}
+[iter8] depth 1 noul: Is the user currently traveling internationally or outside their prima (score 0.976)
+[iter8] depth 1 noul: Is the customer currently traveling outside their carrier's primary ho (score 0.970)
+[iter8] depth 0 choice: What is the primary network symptom described by the customer? (score 0.545)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+grown: 8 nodes | 3 questions | uniform-collapsed 0
+tree (in-sample): acc 0.8595 f1 0.2355 | depth mean 1.8 max 2 | cov@0.97 null
+combiner CV: acc 0.7807 macro_f1 0.2101 T 0.47
+report -> eval/reports/crossdomain_telecom_full_grow.json | tree -> artifacts/trees/induced_iter9.json
+baseline (computed only) macro_f1 0.0399 | 2 candidates admitted
+  eval r0 Is the customer currently traveling outside their carrier' macro_f1 0.2124
+  eval r0 Is the user currently traveling internationally or outside macro_f1 0.2141
+ROUND 0 WINNER: Is the user currently traveling internationally or outside macro_f1 0.2141
+  eval r1 Is the customer currently traveling outside their carrier' macro_f1 0.2183
+ROUND 1 WINNER: Is the customer currently traveling outside their carrier' macro_f1 0.2183
+selected system: features 6 | cv acc 0.7860 | cv macro_f1 0.2183 | T 0.31 | cov@0.97 {"target_precision": 0.97, "coverage": 0.7501, "precision": 0.9918, "threshold": 0.1}
+per-class: {"disconnect_vpn": "0/4", "escalate": "32/32", "grant_app_permission": "18/48", "reboot_device": "0/14", "refuel_data": "32/156", "reseat_sim_card": "0/256", "set_network_mode_preference": "0/4", "toggle_airplane_mode": "0/1", "toggle_data": "34/86", "toggle_roaming": "1680/1680", "toggle_wifi_calling": "0/4"}
+report -> eval/reports/crossdomain_telecom_full.json | model -> eval/reports/crossdomain_telecom_full_model.json
+[2026-11-15T14:05:13Z] live pipeline COMPLETE
+[2026-11-15T15:43:50Z] live pipeline started (pid 2639738)
+[2026-11-15T15:43:50Z] key loaded from .env
+[2026-11-15T15:43:50Z] key present (length not logged)
+[2026-11-15T15:43:50Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T15:43:50Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T15:43:50Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T15:43:50Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T15:43:50Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T15:43:50Z] stage 6/6: bank report already present, skipping
+[2026-11-15T15:43:50Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T15:43:50Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T15:43:50Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T15:43:50Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T15:43:50Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T15:43:50Z] stage 12/14: airline already present, skipping
+[2026-11-15T15:43:50Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T15:43:50Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T15:43:50Z] stage 15/15: iteration 12 on telecom full - dedup, caps, OVR, interactions, weight variants
+[iter8] depth 2 noul: Does the recommended resolution require toggling cellular data roaming (score 1.419)
+[iter8] depth 1 noul: Does the user report seeing a 'No Service' status on their phone? (score 0.837)
+[iter8] depth 2 noul: Does the ticket indicate that the user is currently traveling or conne (score 0.973)
+[iter8] depth 2 noul: Is the customer currently traveling internationally or located outside (score 0.971)
+[iter8] depth 1 noul: Does the complaint specifically involve the use of a messaging applica (score 0.366)
+[iter8] depth 0 noul: Does the customer report seeing a "No Service" notification or complet (score 0.427)
+[ovr:reseat_sim_card] noul: Does the inquiry specifically mention degraded mobile data speed? (score 0.288)
+grown: 13 nodes, 7 questions (bank 10)
+alpha1: dims 37 | acc 0.8214 | macro_f1 0.2755 | cov@0.97 {"target_precision": 0.97, "coverage": 0.7821, "precision": 0.9703, "threshold": 0.2}
+mild: dims 37 | acc 0.8709 | macro_f1 0.2498 | cov@0.97 {"target_precision": 0.97, "coverage": 0.7558, "precision": 0.9913, "threshold": 0.7}
+report -> eval/reports/iteration12_telecom_full.json
+[2026-11-15T16:54:31Z] live pipeline COMPLETE
+[2026-11-15T19:53:30Z] live pipeline started (pid 2819888)
+[2026-11-15T19:53:30Z] key loaded from .env
+[2026-11-15T19:53:30Z] key present (length not logged)
+[2026-11-15T19:53:30Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T19:53:30Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T19:53:30Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T19:53:30Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T19:53:30Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T19:53:30Z] stage 6/6: bank report already present, skipping
+[2026-11-15T19:53:30Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T19:53:30Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T19:53:30Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T19:53:30Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T19:53:30Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T19:53:30Z] stage 12/14: airline already present, skipping
+[2026-11-15T19:53:30Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T19:53:30Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T19:53:30Z] stage 15/15: iteration 12 already present, skipping
+[2026-11-15T19:53:30Z] stage 16: B1 single-prompt baseline - retail
+  b1 25/114 (93s)
+  b1 50/114 (197s)
+  b1 75/114 (301s)
+  b1 100/114 (403s)
+B1: acc 0.3947 | macro_f1 0.2720 | cov@0.97 {"target_precision": 0.97, "coverage": 0.0702, "precision": 1.0, "threshold": 0.95} | 158 calls, 457s
+per-class: {"exchange": "23/26", "auto_approve": "3/27", "modify_order": "15/34", "escalate": "1/4", "modify_user": "1/6", "politely_deny": "0/5", "cancel_order": "2/10", "out_of_scope": "0/2"}
+report -> eval/reports/b1_retail.json
+[2026-11-15T20:01:07Z] stage 16: B1 single-prompt baseline - airline
+  b1 25/50 (94s)
+  b1 50/50 (172s)
+B1: acc 0.4000 | macro_f1 0.2666 | cov@0.97 null | 65 calls, 172s
+per-class: {"politely_deny": "4/19", "out_of_scope": "0/4", "cancel_order": "2/4", "book_order": "3/8", "modify_order": "11/14", "escalate": "0/1"}
+report -> eval/reports/b1_airline.json
+[2026-11-15T20:03:58Z] stage 16: B1 single-prompt baseline - telecom_full
+  b1 25/2285 (134s)
+  b1 50/2285 (255s)
+  b1 75/2285 (383s)
+[2026-11-15T20:20:13Z] live pipeline started (pid 2839537)
+[2026-11-15T20:20:13Z] key loaded from .env
+[2026-11-15T20:20:13Z] key present (length not logged)
+[2026-11-15T20:20:13Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T20:20:13Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T20:20:13Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T20:20:13Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T20:20:13Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T20:20:13Z] stage 6/6: bank report already present, skipping
+[2026-11-15T20:20:13Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T20:20:13Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T20:20:13Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T20:20:13Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T20:20:13Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T20:20:13Z] stage 12/14: airline already present, skipping
+[2026-11-15T20:20:13Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T20:20:13Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T20:20:13Z] stage 15/15: iteration 12 already present, skipping
+[2026-11-15T20:20:13Z] stage 16: B1 retail already present, skipping
+[2026-11-15T20:20:13Z] stage 16: B1 airline already present, skipping
+[2026-11-15T20:20:13Z] stage 16: B1 single-prompt baseline - telecom_full
+  b1 125/2285 done (31s, 8 workers)
+  b1 175/2285 done (58s, 8 workers)
+  b1 225/2285 done (88s, 8 workers)
+  b1 275/2285 done (117s, 8 workers)
+  b1 325/2285 done (147s, 8 workers)
+  b1 375/2285 done (177s, 8 workers)
+  b1 425/2285 done (206s, 8 workers)
+  b1 475/2285 done (232s, 8 workers)
+  b1 525/2285 done (260s, 8 workers)
+  b1 575/2285 done (288s, 8 workers)
+  b1 625/2285 done (314s, 8 workers)
+  b1 675/2285 done (342s, 8 workers)
+  b1 725/2285 done (370s, 8 workers)
+  b1 775/2285 done (399s, 8 workers)
+  b1 825/2285 done (427s, 8 workers)
+  b1 875/2285 done (456s, 8 workers)
+  b1 925/2285 done (484s, 8 workers)
+  b1 975/2285 done (514s, 8 workers)
+  b1 1025/2285 done (545s, 8 workers)
+  b1 1075/2285 done (572s, 8 workers)
+  b1 1125/2285 done (600s, 8 workers)
+  b1 1175/2285 done (632s, 8 workers)
+  b1 1225/2285 done (662s, 8 workers)
+  b1 1275/2285 done (692s, 8 workers)
+  b1 1325/2285 done (723s, 8 workers)
+  b1 1375/2285 done (748s, 8 workers)
+  b1 1425/2285 done (776s, 8 workers)
+  b1 1475/2285 done (805s, 8 workers)
+  b1 1525/2285 done (835s, 8 workers)
+  b1 1575/2285 done (867s, 8 workers)
+  b1 1625/2285 done (897s, 8 workers)
+  b1 1675/2285 done (931s, 8 workers)
+  b1 1725/2285 done (963s, 8 workers)
+  b1 1775/2285 done (994s, 8 workers)
+  b1 1825/2285 done (1028s, 8 workers)
+  b1 1875/2285 done (1060s, 8 workers)
+  b1 1925/2285 done (1092s, 8 workers)
+  b1 1975/2285 done (1124s, 8 workers)
+  b1 2025/2285 done (1155s, 8 workers)
+  b1 2075/2285 done (1184s, 8 workers)
+  b1 2125/2285 done (1216s, 8 workers)
+  b1 2175/2285 done (1248s, 8 workers)
+  b1 2225/2285 done (1277s, 8 workers)
+  b1 2275/2285 done (1308s, 8 workers)
+  b1 2285/2285 done (1313s, 8 workers)
+B1: acc 0.0293 | macro_f1 0.0149 | cov@0.97 null | 2210 calls, 1313s
+per-class: {"toggle_roaming": "9/1680", "toggle_data": "0/86", "set_network_mode_preference": "0/4", "disconnect_vpn": "0/4", "refuel_data": "58/156", "toggle_airplane_mode": "0/1", "reseat_sim_card": "0/256", "escalate": "0/32", "reboot_device": "0/14", "toggle_wifi_calling": "0/4", "grant_app_permission": "0/48"}
+report -> eval/reports/b1_telecom_full.json
+[2026-11-15T20:42:06Z] live pipeline COMPLETE
+[2026-11-15T21:58:46Z] live pipeline started (pid 2911823)
+[2026-11-15T21:58:46Z] key loaded from .env
+[2026-11-15T21:58:46Z] key present (length not logged)
+[2026-11-15T21:58:46Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T21:58:46Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T21:58:46Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T21:58:46Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T21:58:46Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T21:58:46Z] stage 6/6: bank report already present, skipping
+[2026-11-15T21:58:46Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T21:58:46Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T21:58:46Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T21:58:46Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T21:58:46Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T21:58:46Z] stage 12/14: airline already present, skipping
+[2026-11-15T21:58:46Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T21:58:46Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T21:58:46Z] stage 15/15: iteration 12 already present, skipping
+[2026-11-15T21:58:46Z] stage 16: B1 single-prompt baseline - retail
+  b1 50/114 done (38s, 8 workers)
+  b1 100/114 done (75s, 8 workers)
+  b1 114/114 done (84s, 8 workers)
+B1: acc 0.5965 | macro_f1 0.5566 | cov@0.97 {"target_precision": 0.97, "coverage": 0.0614, "precision": 1.0, "threshold": 0.95} | 114 calls, 84s
+per-class: {"exchange": "25/26", "auto_approve": "4/27", "modify_order": "27/34", "escalate": "2/4", "modify_user": "3/6", "politely_deny": "1/5", "cancel_order": "4/10", "out_of_scope": "2/2"}
+report -> eval/reports/b1_retail.json
+[2026-11-15T22:00:10Z] stage 16: B1 single-prompt baseline - airline
+  b1 50/50 done (31s, 8 workers)
+B1: acc 0.4800 | macro_f1 0.3277 | cov@0.97 null | 50 calls, 31s
+per-class: {"politely_deny": "7/19", "out_of_scope": "0/4", "cancel_order": "3/4", "book_order": "3/8", "modify_order": "11/14", "escalate": "0/1"}
+report -> eval/reports/b1_airline.json
+[2026-11-15T22:00:41Z] stage 16: B1 single-prompt baseline - telecom_full
+  b1 50/2285 done (32s, 8 workers)
+  b1 100/2285 done (65s, 8 workers)
+  b1 150/2285 done (98s, 8 workers)
+  b1 200/2285 done (127s, 8 workers)
+  b1 250/2285 done (159s, 8 workers)
+  b1 300/2285 done (210s, 8 workers)
+  b1 350/2285 done (235s, 8 workers)
+  b1 400/2285 done (264s, 8 workers)
+  b1 450/2285 done (293s, 8 workers)
+  b1 500/2285 done (318s, 8 workers)
+  b1 550/2285 done (344s, 8 workers)
+  b1 600/2285 done (369s, 8 workers)
+  b1 650/2285 done (395s, 8 workers)
+  b1 700/2285 done (423s, 8 workers)
+  b1 750/2285 done (449s, 8 workers)
+  b1 800/2285 done (477s, 8 workers)
+  b1 850/2285 done (499s, 8 workers)
+  b1 900/2285 done (525s, 8 workers)
+  b1 950/2285 done (547s, 8 workers)
+  b1 1000/2285 done (576s, 8 workers)
+  b1 1050/2285 done (600s, 8 workers)
+  b1 1100/2285 done (627s, 8 workers)
+  b1 1150/2285 done (655s, 8 workers)
+  b1 1200/2285 done (683s, 8 workers)
+  b1 1250/2285 done (709s, 8 workers)
+  b1 1300/2285 done (739s, 8 workers)
+  b1 1350/2285 done (762s, 8 workers)
+  b1 1400/2285 done (790s, 8 workers)
+  b1 1450/2285 done (816s, 8 workers)
+  b1 1500/2285 done (845s, 8 workers)
+  b1 1550/2285 done (871s, 8 workers)
+  b1 1600/2285 done (898s, 8 workers)
+  b1 1650/2285 done (927s, 8 workers)
+  b1 1700/2285 done (956s, 8 workers)
+  b1 1750/2285 done (984s, 8 workers)
+  b1 1800/2285 done (1009s, 8 workers)
+  b1 1850/2285 done (1033s, 8 workers)
+  b1 1900/2285 done (1061s, 8 workers)
+  b1 1950/2285 done (1085s, 8 workers)
+  b1 2000/2285 done (1110s, 8 workers)
+  b1 2050/2285 done (1139s, 8 workers)
+  b1 2100/2285 done (1164s, 8 workers)
+  b1 2150/2285 done (1190s, 8 workers)
+  b1 2200/2285 done (1215s, 8 workers)
+  b1 2250/2285 done (1242s, 8 workers)
+  b1 2285/2285 done (1260s, 8 workers)
+B1: acc 0.0919 | macro_f1 0.0227 | cov@0.97 null | 2285 calls, 1260s
+per-class: {"toggle_roaming": "52/1680", "toggle_data": "0/86", "set_network_mode_preference": "0/4", "disconnect_vpn": "0/4", "refuel_data": "156/156", "toggle_airplane_mode": "1/1", "reseat_sim_card": "1/256", "escalate": "0/32", "reboot_device": "0/14", "toggle_wifi_calling": "0/4", "grant_app_permission": "0/48"}
+report -> eval/reports/b1_telecom_full.json
+[2026-11-15T22:21:41Z] live pipeline COMPLETE
+[2026-11-15T22:59:45Z] live pipeline started (pid 2956400)
+[2026-11-15T22:59:45Z] key loaded from .env
+[2026-11-15T22:59:45Z] key present (length not logged)
+[2026-11-15T22:59:45Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T22:59:45Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T22:59:45Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T22:59:45Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T22:59:45Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T22:59:45Z] stage 6/6: bank report already present, skipping
+[2026-11-15T22:59:45Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T22:59:45Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T22:59:45Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T22:59:45Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T22:59:45Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T22:59:45Z] stage 12/14: airline already present, skipping
+[2026-11-15T22:59:45Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T22:59:45Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T22:59:45Z] stage 15/15: iteration 12 already present, skipping
+[2026-11-15T22:59:45Z] stage 16: B1 retail already present, skipping
+[2026-11-15T22:59:45Z] stage 16: B1 airline already present, skipping
+[2026-11-15T22:59:45Z] stage 16: B1 telecom_full already present, skipping
+[2026-11-15T22:59:45Z] stage 17: B1.5 few-shot baseline (8 stratified train shots) - retail
+  b1 50/114 done (43s, 8 workers)
+  b1 100/114 done (83s, 8 workers)
+  b1 114/114 done (93s, 8 workers)
+B1: acc 0.5614 | macro_f1 0.5432 | cov@0.97 null | 114 calls, 93s
+per-class: {"exchange": "25/26", "auto_approve": "3/27", "modify_order": "19/34", "escalate": "2/4", "modify_user": "5/6", "politely_deny": "3/5", "cancel_order": "5/10", "out_of_scope": "2/2"}
+report -> eval/reports/b1_fewshot_retail.json
+[2026-11-15T23:01:17Z] live pipeline COMPLETE
+[2026-11-15T23:04:41Z] live pipeline started (pid 2960410)
+[2026-11-15T23:04:41Z] key loaded from .env
+[2026-11-15T23:04:41Z] key present (length not logged)
+[2026-11-15T23:04:41Z] stage 1/2: baseline report already present, skipping
+[2026-11-15T23:04:41Z] stage 2/2: induced tree already present, skipping
+[2026-11-15T23:04:41Z] stage 3/3: combiner report already present, skipping
+[2026-11-15T23:04:41Z] stage 4/4: criteria report already present, skipping
+[2026-11-15T23:04:41Z] stage 5/5: fresh-run report already present, skipping
+[2026-11-15T23:04:41Z] stage 6/6: bank report already present, skipping
+[2026-11-15T23:04:41Z] stage 7/9: experiment A already present, skipping
+[2026-11-15T23:04:41Z] stage 8/9: experiment B already present, skipping
+[2026-11-15T23:04:41Z] stage 9/9: experiment C already present, skipping
+[2026-11-15T23:04:41Z] stage 10/10: iteration 8 already present, skipping
+[2026-11-15T23:04:41Z] stage 11/11: iteration 9 already present, skipping
+[2026-11-15T23:04:41Z] stage 12/14: airline already present, skipping
+[2026-11-15T23:04:41Z] stage 13/14: telecom_base already present, skipping
+[2026-11-15T23:04:41Z] stage 14/14: telecom_full already present, skipping
+[2026-11-15T23:04:41Z] stage 15/15: iteration 12 already present, skipping
+[2026-11-15T23:04:41Z] stage 16: B1 retail already present, skipping
+[2026-11-15T23:04:41Z] stage 16: B1 airline already present, skipping
+[2026-11-15T23:04:41Z] stage 16: B1 telecom_full already present, skipping
+[2026-11-15T23:04:41Z] stage 17: B1.5 already present, skipping
+[2026-11-15T23:04:41Z] stage 18: one-shot generation ablation - does iterative induction add value?
+one-shot generated 1 questions:
+  [choice] What is the customer's primary objective regarding their account or order?
+[iter8] depth 2 noul: Does the account hold a gift card? (score 0.253)
+[iter8] depth 2 choice: What is the customer's primary objective regarding their account or or (score 0.192)
+[iter8] depth 1 choice: What is the customer's primary objective regarding their account or or (score 0.231)
+[iter8] depth 3 choice: What is the customer's primary objective regarding their account or or (score 0.037)
+[iter8] depth 3 choice: What is the customer's primary objective regarding their account or or (score 0.156)
+[iter8] depth 2 choice: What is the customer's primary objective regarding their account or or (score 0.085)
+[iter8] depth 2 choice: What is the customer's primary objective regarding their account or or (score 0.183)
+[iter8] depth 1 noul: Is the referenced order status delivered? (score 0.277)
+[iter8] depth 0 noul: Is the referenced order status pending? (score 0.451)
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+  scored 1/1
+
+one-shot flat combiner: acc 0.2895 macro_f1 0.2420
+greedy tree from pool:  acc 0.4386 macro_f1 0.3148 (4 questions used)
+report -> eval/reports/exp_oneshot_retail.json
+[2026-11-15T23:05:25Z] live pipeline COMPLETE

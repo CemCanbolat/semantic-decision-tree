@@ -1,0 +1,42 @@
+{
+  "experiment": "A_constrained_choice_score",
+  "choice_options": {
+    "auto_approve": "auto approve",
+    "cancel_order": "cancel order",
+    "escalate": "escalate",
+    "exchange": "exchange",
+    "modify_order": "modify order",
+    "modify_user": "modify user",
+    "out_of_scope": "out of scope",
+    "politely_deny": "politely deny"
+  },
+  "rubric": [
+    "Single order exchange request referencing specific replacement preferences and an order ID.",
+    "Multi-item exchange request requiring multiple replacements without an order ID.",
+    "Compound inquiry combining store inventory questions with order returns or modifications."
+  ],
+  "branch_sizes": {
+    "auto_approve": 10,
+    "cancel_order": 9,
+    "escalate": 3,
+    "exchange": 35,
+    "modify_order": 52,
+    "modify_user": 3,
+    "out_of_scope": 0,
+    "politely_deny": 2
+  },
+  "tree": {
+    "accuracy": 0.386,
+    "macro_f1": 0.358,
+    "n_leaves": 16,
+    "coverage_at_0.97": null
+  },
+  "combiner": {
+    "n_features": 15,
+    "cv_accuracy": 0.5877,
+    "cv_macro_f1": 0.5006,
+    "temperature": 0.7109
+  },
+  "best_feature_set": "expA",
+  "no_criteria": true
+}

@@ -1,0 +1,99 @@
+{
+  "tree_id": "induced_20261114_024544",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n003": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n004": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n002": {
+      "question_qid": "q_1372d87695983d4a",
+      "child_yes": "n003",
+      "child_no": "n004",
+      "leaf_label": null
+    },
+    "n006": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_user"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "cancel_order"
+    },
+    "n009": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n007": {
+      "question_qid": "q_0ab95b976b97038d",
+      "child_yes": "n008",
+      "child_no": "n009",
+      "leaf_label": null
+    },
+    "n005": {
+      "question_qid": "q_01ef1405691570e4",
+      "child_yes": "n006",
+      "child_no": "n007",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_5d5dc5cfa76c79e2",
+      "child_yes": "n002",
+      "child_no": "n005",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_5d5dc5cfa76c79e2": {
+      "qid": "q_5d5dc5cfa76c79e2",
+      "text": "Does the ticket mention changing the size, color, or specifications of an item?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_1372d87695983d4a": {
+      "qid": "q_1372d87695983d4a",
+      "text": "Does the ticket refer to an order that is pending or has just been placed?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_01ef1405691570e4": {
+      "qid": "q_01ef1405691570e4",
+      "text": "Does the ticket mention updating, modifying, or changing an address?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:modify_user",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_0ab95b976b97038d": {
+      "qid": "q_0ab95b976b97038d",
+      "text": "Is the referenced order status pending?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "order_status_pending",
+      "criteria": null
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-11-13T22:13:25Z",
+  "source": "tau2-bench retail",
+  "tau2_dir": "tau2_clone/tau2-bench/data/tau2/domains/retail",
+  "n_examples": 114,
+  "label_counts": {
+    "auto_approve": 27,
+    "cancel_order": 10,
+    "escalate": 4,
+    "exchange": 26,
+    "modify_order": 34,
+    "modify_user": 6,
+    "out_of_scope": 2,
+    "politely_deny": 5
+  },
+  "split_counts": {
+    "test": 40,
+    "train": 74
+  },
+  "family_counts": {
+    "tau2:cancel_pending_order": 10,
+    "tau2:exchange_delivered_order_items": 26,
+    "tau2:modify_pending_order_address": 3,
+    "tau2:modify_pending_order_items": 30,
+    "tau2:modify_pending_order_payment": 1,
+    "tau2:modify_user_address": 6,
+    "tau2:no_write_info_only": 2,
+    "tau2:no_write_refund_intent": 5,
+    "tau2:return_delivered_order_items": 27,
+    "tau2:transfer_to_human_agents": 4
+  },
+  "ambiguous_tasks": 30,
+  "user_join_failures": 2,
+  "order_join_failures": 2,
+  "taxonomy_note": "Labels derive from reference-action DB writes (ACTION_PREFIX_MAP). request_photo_proof never fires on tau2 retail: the policy has no photo-proof flow. No 30-day return window exists in this policy.",
+  "seed": 7
+}

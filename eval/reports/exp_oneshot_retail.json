@@ -1,0 +1,28 @@
+{
+  "experiment": "one_shot_generation_ablation",
+  "n_questions": 1,
+  "questions": [
+    "What is the customer's primary objective regarding their account or order?"
+  ],
+  "flat_combiner": {
+    "dims": 7,
+    "cv_accuracy": 0.2895,
+    "cv_macro_f1": 0.242,
+    "temperature": 0.9401
+  },
+  "greedy_tree_from_pool": {
+    "accuracy": 0.4386,
+    "macro_f1": 0.3148,
+    "nodes": 19,
+    "leaves": 10,
+    "questions_used": 4
+  },
+  "vs": {
+    "champion_iterative_cv": 0.6453,
+    "champion_holdout": 0.7555,
+    "b1_zero_shot": 0.5566,
+    "b1_few_shot": 0.5432
+  },
+  "note": "natural one-shot prompt (up to 12); the model chose ONE catch-all question - elegance over coverage is the observed failure mode and part of the result",
+  "best_feature_set": "oneshot"
+}

@@ -1,0 +1,29 @@
+{
+  "experiment": "C_paraphrase_ensemble",
+  "paraphrases": [
+    "Is the customer requesting an update to a specific detail of their order or item, such as the size, color, or shipping address?",
+    "Does the customer want to alter a product attribute or order detail, such as the size, color, version, or delivery address?",
+    "Does the ticket indicate that the customer's item or order has already been delivered to them?",
+    "Does the ticket show or suggest that the customer already has the ordered merchandise in hand?",
+    "Does the text state that any items have already been received?",
+    "Are any previously received items mentioned in the text?",
+    "Is the customer requesting to update their account or user address?",
+    "Does the customer request a change to the address on their account or user profile?",
+    "Is this ticket about an order that was recently placed or is currently pending?",
+    "Does the inquiry concern an order that is pending or was just submitted?"
+  ],
+  "results": {
+    "originals_only": {
+      "n_features": 9,
+      "cv_accuracy": 0.6754,
+      "cv_macro_f1": 0.5903
+    },
+    "with_paraphrases": {
+      "n_features": 19,
+      "cv_accuracy": 0.6754,
+      "cv_macro_f1": 0.5894,
+      "temperature": 0.8175
+    }
+  },
+  "best_feature_set": "expC"
+}

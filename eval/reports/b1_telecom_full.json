@@ -1,0 +1,24 @@
+{
+  "baseline": "B1 single-prompt frontier classifier",
+  "model": "gemini-flash-latest",
+  "n": 2285,
+  "api_calls": 2285,
+  "accuracy": 0.0919,
+  "macro_f1": 0.0227,
+  "coverage_at_0.97": null,
+  "per_class_recall": {
+    "toggle_roaming": "52/1680",
+    "toggle_data": "0/86",
+    "set_network_mode_preference": "0/4",
+    "disconnect_vpn": "0/4",
+    "refuel_data": "156/156",
+    "toggle_airplane_mode": "1/1",
+    "reseat_sim_card": "1/256",
+    "escalate": "0/32",
+    "reboot_device": "0/14",
+    "toggle_wifi_calling": "0/4",
+    "grant_app_permission": "0/48"
+  },
+  "note": "confidence is self-rated (0-100), not calibrated probabilities",
+  "wall_seconds": 1260
+}

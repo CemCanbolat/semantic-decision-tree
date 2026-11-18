@@ -1,0 +1,40 @@
+{
+  "experiment": "iteration8_deep_soft_pruned",
+  "protocol": "5-fold nested CV: grow on 70% of train folds, prune on 30%, test fold only scores",
+  "oof_accuracy": 0.4912,
+  "oof_macro_f1_mean": 0.3154,
+  "fold_macro_f1": [
+    0.471,
+    0.2634,
+    0.2158,
+    0.2842,
+    0.3425
+  ],
+  "oof_per_class_recall": {
+    "auto_approve": "9/27",
+    "cancel_order": "6/10",
+    "escalate": "0/4",
+    "exchange": "22/26",
+    "modify_order": "16/34",
+    "modify_user": "1/6",
+    "out_of_scope": "2/2",
+    "politely_deny": "0/5"
+  },
+  "final_tree": {
+    "nodes": 19,
+    "leaves": 10,
+    "questions": 8,
+    "types": {
+      "noul": 7,
+      "choice": 1
+    },
+    "max_depth": 5
+  },
+  "vs": {
+    "champion_bank_selected": 0.5903,
+    "iter7_B_tree_insample": 0.7018,
+    "iter7_B_tree_macrosample": 0.5277
+  },
+  "best_feature_set": "iter8",
+  "wall_seconds": 963
+}

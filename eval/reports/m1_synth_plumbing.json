@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-11-13T22:00:55Z",
+  "corpus": "synthetic fixture corpus (n_per_family=4, seed=7)",
+  "warning": "scores produced by heuristic-keyword-standin - plumbing validation only, not Jev quality",
+  "baselines": [
+    {
+      "baseline": "B2_hand_tree_soft",
+      "scorer": "heuristic-keyword-standin",
+      "n": 36,
+      "accuracy": 0.8889,
+      "macro_f1": 0.8519,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 0.3333,
+        "precision": 1.0,
+        "threshold": 0.6
+      },
+      "confusion": {
+        "auto_approve": {
+          "auto_approve": 4
+        },
+        "politely_deny": {
+          "politely_deny": 4
+        },
+        "exchange": {
+          "exchange": 4
+        },
+        "cancel_order": {
+          "cancel_order": 4
+        },
+        "modify_order": {
+          "modify_order": 4
+        },
+        "escalate": {
+          "escalate": 4
+        },
+        "request_photo_proof": {
+          "auto_approve": 4
+        },
+        "needs_info": {
+          "needs_info": 4
+        },
+        "out_of_scope": {
+          "out_of_scope": 4
+        }
+      },
+      "outcome_counts": {
+        "escalated_margin": 24,
+        "auto_executed": 12
+      }
+    },
+    {
+      "baseline": "B2_hand_tree_hard",
+      "scorer": "heuristic-keyword-standin",
+      "n": 36,
+      "accuracy": 0.8889,
+      "macro_f1": 0.8519,
+      "coverage_at_0.97": null,
+      "confusion": {
+        "auto_approve": {
+          "auto_approve": 4
+        },
+        "politely_deny": {
+          "politely_deny": 4
+        },
+        "exchange": {
+          "exchange": 4
+        },
+        "cancel_order": {
+          "cancel_order": 4
+        },
+        "modify_order": {
+          "modify_order": 4
+        },
+        "escalate": {
+          "escalate": 4
+        },
+        "request_photo_proof": {
+          "auto_approve": 4
+        },
+        "needs_info": {
+          "needs_info": 4
+        },
+        "out_of_scope": {
+          "out_of_scope": 4
+        }
+      },
+      "outcome_counts": {
+        "auto_executed": 36
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "labels": [
+    "escalate",
+    "grant_app_permission",
+    "reboot_device",
+    "refuel_data",
+    "reseat_sim_card",
+    "set_network_mode_preference",
+    "toggle_data",
+    "toggle_roaming"
+  ],
+  "features": [
+    "Have basic local troubleshooting steps, such as toggling airplane mode, already been completed?",
+    "Is the customer currently traveling outside their domestic network area or abroad?",
+    "Is the referenced order status delivered?",
+    "Is the referenced order status pending?",
+    "Have there been more than two refunds on the account's orders?",
+    "Does the account hold a gift card?"
+  ],
+  "temperature": 0.4065,
+  "weights": [
+    [
+      -0.3216613500616842,
+      -0.025925738998284042,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.4459869363572651,
+      -1.2217582267435343,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.2720573360553926,
+      0.7649480807681669,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.13174918242453904,
+      -1.220435377990078,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.13383713821784005,
+      0.06004031915463497,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.03521079066842425,
+      -0.8151435765407976,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.07962867264910478,
+      -1.2317498901939565,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.1151651664036482,
+      3.6900244105438476,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "bias": [
+    0.2806977467623434,
+    0.4718036418934465,
+    -0.02337377135415341,
+    0.33296776643612175,
+    0.15430129635840892,
+    -0.2690238830915915,
+    0.3467534669901723,
+    -1.29412626399475
+  ],
+  "selected_questions": [
+    "Is the customer currently traveling outside their domestic network area or abroad?",
+    "Have basic local troubleshooting steps, such as toggling airplane mode, already been completed?"
+  ]
+}

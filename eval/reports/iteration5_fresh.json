@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-14T02:50:15Z",
+  "n_examples": 114,
+  "labels": [
+    "auto_approve",
+    "cancel_order",
+    "escalate",
+    "exchange",
+    "modify_order",
+    "modify_user",
+    "out_of_scope",
+    "politely_deny"
+  ],
+  "leaf_relabel": {
+    "skipped": "refuted: any alpha > 1 gives the rarest class every leaf; rare classes must earn influence via features (the combiner)"
+  },
+  "feature_sets": {
+    "induced_v4_plus_computed": {
+      "n_features": 8,
+      "cv_accuracy": 0.4825,
+      "cv_macro_f1": 0.4092,
+      "temperature": 0.8175,
+      "coverage_at_0.97": null
+    }
+  },
+  "best_feature_set": "induced_v4_plus_computed",
+  "model_path": "eval/reports/combiner_model.json"
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "node": "n001",
+    "question": "Does the user request a return or refund of items from the order?",
+    "source": "induced:pair:auto_approve_vs_cancel_order",
+    "train_ig": 0.970951,
+    "train_cert": 0.8,
+    "train_score": 0.77676,
+    "val_score": 0.125,
+    "baseline": 0.1,
+    "picked": true
+  },
+  {
+    "node": "n001",
+    "question": "Does the ticket mention the weather?",
+    "source": "induced:pair:auto_approve_vs_cancel_order",
+    "train_ig": null,
+    "train_cert": null,
+    "train_score": null,
+    "val_score": null,
+    "baseline": 0.1,
+    "picked": false
+  },
+  {
+    "node": "n001",
+    "question": "Is the message written in English?",
+    "source": "induced:pair:auto_approve_vs_cancel_order",
+    "train_ig": null,
+    "train_cert": null,
+    "train_score": null,
+    "val_score": null,
+    "baseline": 0.1,
+    "picked": false
+  }
+]

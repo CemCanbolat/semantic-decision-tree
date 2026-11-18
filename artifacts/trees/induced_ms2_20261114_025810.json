@@ -1,0 +1,141 @@
+{
+  "tree_id": "ms2_20261114_025810",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n002": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_user"
+    },
+    "n005": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n007": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "exchange"
+    },
+    "n008": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n006": {
+      "question_qid": "q_e9bd91aafa3074d0",
+      "child_yes": "n007",
+      "child_no": "n008",
+      "leaf_label": null
+    },
+    "n004": {
+      "question_qid": "q_938defaab8b90634",
+      "child_yes": "n005",
+      "child_no": "n006",
+      "leaf_label": null
+    },
+    "n010": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n012": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n013": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n011": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n009": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n003": {
+      "question_qid": "q_7586846df2d3ad9a",
+      "child_yes": "n004",
+      "child_no": "n009",
+      "leaf_label": null
+    },
+    "n001": {
+      "question_qid": "q_ac1c24f1aeec7213",
+      "child_yes": "n002",
+      "child_no": "n003",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_ac1c24f1aeec7213": {
+      "qid": "q_ac1c24f1aeec7213",
+      "text": "Does the customer ask to change their account or user address?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:modify_user",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_7586846df2d3ad9a": {
+      "qid": "q_7586846df2d3ad9a",
+      "text": "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_938defaab8b90634": {
+      "qid": "q_938defaab8b90634",
+      "text": "Does the account hold a gift card?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "has_gift_card",
+      "criteria": null
+    },
+    "q_e9bd91aafa3074d0": {
+      "qid": "q_e9bd91aafa3074d0",
+      "text": "Does the ticket state that the customer has already received an item?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:exchange_vs_modify_order",
+      "resolver": null,
+      "criteria": null
+    },
+    "q_0ab95b976b97038d": {
+      "qid": "q_0ab95b976b97038d",
+      "text": "Is the referenced order status pending?",
+      "qtype": "computed",
+      "version": 1,
+      "provenance": "seed-computed",
+      "resolver": "order_status_pending",
+      "criteria": null
+    },
+    "q_181ddb5bffce06c6": {
+      "qid": "q_181ddb5bffce06c6",
+      "text": "Does the text mention that an item was received?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:auto_approve_vs_escalate",
+      "resolver": null,
+      "criteria": null
+    }
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "questions": {
+    "aa84d14d398f9e7a": {
+      "text": "Does the text omit any mention of \"return\" or \"cancel\"?",
+      "criteria": null,
+      "provenance": "induced:node1",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "6a5507c20168cc01": {
+      "text": "Does the ticket mention modifying an order or changing an existing order detail?",
+      "criteria": null,
+      "provenance": "induced:node2",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "ac51ae29aaf5ca45": {
+      "text": "Does the text contain the word \"modify\", \"change\", or \"upgrade\"?",
+      "criteria": null,
+      "provenance": "induced:node3",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "d1ed294c1a5fbde3": {
+      "text": "Does the text explicitly mention wanting to exchange an item or get a new pair or different size of a product?",
+      "criteria": null,
+      "provenance": "induced:node6",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "cd87aa47d3b917e7": {
+      "text": "Does the ticket mention a preference regarding the refund or payment method (such as PayPal, original payment, or refunding to a specific payment method)?",
+      "criteria": null,
+      "provenance": "induced:node7",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "f7137a9be7887fd7": {
+      "text": "Does the ticket mention a specific product such as a tablet, camera, air purifier, luggage, or skateboard?",
+      "criteria": null,
+      "provenance": "induced:node8",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "c184399a4eeb1077": {
+      "text": "Does the ticket text mention an air purifier, a camera, or a tablet?",
+      "criteria": null,
+      "provenance": "induced:node9",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "861a28a55b64509b": {
+      "text": "Does the customer explicitly state an intention or request to return at least one item?",
+      "criteria": null,
+      "provenance": "induced:node10",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "971e16d699f56ced": {
+      "text": "Does the reason for contact mention the word \"cancel\"?",
+      "criteria": null,
+      "provenance": "induced:node11",
+      "runs": [
+        "induced_v1"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "fa808856120f2ebb": {
+      "text": "Does the customer ask to exchange an item for a different size, color, or version?",
+      "criteria": {
+        "true_description": "The customer explicitly requests replacing an ordered item with an alternate variant, such as a different size, color, or model.",
+        "false_description": "The customer seeks an identical replacement for defects, a standard return or refund, or asks about availability without requesting a swap."
+      },
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "d57963dd7735b181": {
+      "text": "Does the customer mention more than one order or an additional order?",
+      "criteria": {
+        "true_description": "The customer explicitly references two or more distinct order IDs, separate transactions, or introduces a second purchase alongside the primary one.",
+        "false_description": "The customer refers to only one transaction, even with multiple items, split shipments, exchange replacements, or general questions about ordering policies."
+      },
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "e61a09b871e5fb39": {
+      "text": "Does the ticket refer to an order as being pending, just placed, or not yet shipped?",
+      "criteria": {
+        "true_description": "The ticket describes an existing order as currently processing, recently placed, awaiting fulfillment, or not yet handed over to a carrier.",
+        "false_description": "The order is already dispatched, in transit"
+      },
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "c266b85a7582c585": {
+      "text": "Does the ticket state or imply that the customer has already received an item or order?",
+      "criteria": {
+        "true_description": "The customer indicates physical possession by evaluating, using, unboxing, or seeking returns or repairs for goods they actually took in hand.",
+        "false_description": "The shipment is pending, delayed, canceled pre-delivery, or marked delivered by tracking yet explicitly claimed missing by the customer."
+      },
+      "provenance": "induced:pair:exchange_vs_modify_order",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "4890e0593ae87c3c": {
+      "text": "Does the user ask to make changes or modifications to an order or its payment?",
+      "criteria": {
+        "true_description": "The user requests altering items, quantities, shipping address, delivery speed, or billing details for an existing, unfulfilled order.",
+        "false_description": "The user requests complete cancellation, post-delivery returns or exchanges, updates account-level profile defaults, or solely checks order or payment status."
+      },
+      "provenance": "induced:ovr:modify_order",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "eb1b29d41a2bc99e": {
+      "text": "Does the ticket mention a specific city or geographic location?",
+      "criteria": {
+        "true_description": "The text contains a proper noun identifying a city, town, state, country, or distinct geographic landmark.",
+        "false_description": "The text only includes generic terms like \"local store,\" numerical store IDs, street addresses without a town, or carrier shipping statuses."
+      },
+      "provenance": "induced:ovr:modify_user",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "95a2164396546593": {
+      "text": "Does the text state that the customer wants to return one or more items?",
+      "criteria": {
+        "true_description": "The customer explicitly requests or declares an intent to send back received merchandise for a refund or store credit.",
+        "false_description": "The customer requests an exchange, cancels an unfulfilled order, asks about policies hypothetically, or demands a refund without returning the item."
+      },
+      "provenance": "induced:pair:auto_approve_vs_cancel_order",
+      "runs": [
+        "induced_v3",
+        "induced_v3_criteria"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "5d5dc5cfa76c79e2": {
+      "text": "Does the ticket mention changing the size, color, or specifications of an item?",
+      "criteria": null,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "runs": [
+        "induced_v4"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "1372d87695983d4a": {
+      "text": "Does the ticket refer to an order that is pending or has just been placed?",
+      "criteria": null,
+      "provenance": "induced:pair:modify_order_vs_exchange",
+      "runs": [
+        "induced_v4"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "01ef1405691570e4": {
+      "text": "Does the ticket mention updating, modifying, or changing an address?",
+      "criteria": null,
+      "provenance": "induced:ovr:modify_user",
+      "runs": [
+        "induced_v4"
+      ],
+      "first_seen": "2026-11-14T02:56:39Z"
+    },
+    "d36bd7b5e650fa38": {
+      "text": "Does the customer ask to modify or change an attribute of a pending order?",
+      "criteria": null,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "runs": [
+        "ms0_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:01:55Z"
+    },
+    "dc805f03e2e40c86": {
+      "text": "Does the text mention items that have already been received?",
+      "criteria": null,
+      "provenance": "induced:ovr:auto_approve",
+      "runs": [
+        "ms0_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:01:55Z"
+    },
+    "a7db74ff71b02ce6": {
+      "text": "Does the ticket describe a request to replace an item with one that has different specifications, dimensions, or capacity (such as zoom, size, pressure, brightness, or processor specs)?",
+      "criteria": null,
+      "provenance": "induced:pair:exchange_vs_auto_approve",
+      "runs": [
+        "ms0_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:01:55Z"
+    },
+    "9766cc8ddaea70c1": {
+      "text": "Does the customer request to update, change, or modify an address?",
+      "criteria": null,
+      "provenance": "induced:ovr:modify_user",
+      "runs": [
+        "ms1_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:05:26Z"
+    },
+    "22829f0bec64469f": {
+      "text": "Does the customer express a preference for a different size or capacity of an item (such as medium, bigger, or maximum size)?",
+      "criteria": null,
+      "provenance": "induced:pair:exchange_vs_auto_approve",
+      "runs": [
+        "ms1_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:05:26Z"
+    },
+    "aa62ef51dda95547": {
+      "text": "Does the ticket mention wanting a refund?",
+      "criteria": null,
+      "provenance": "induced:pair:auto_approve_vs_exchange",
+      "runs": [
+        "ms1_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:05:26Z"
+    },
+    "ac1c24f1aeec7213": {
+      "text": "Does the customer ask to change their account or user address?",
+      "criteria": null,
+      "provenance": "induced:ovr:modify_user",
+      "runs": [
+        "ms2_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:09:47Z"
+    },
+    "7586846df2d3ad9a": {
+      "text": "Does the customer ask to change or modify an attribute of an item or order (such as size, color, version, or address)?",
+      "criteria": null,
+      "provenance": "induced:pair:modify_order_vs_auto_approve",
+      "runs": [
+        "ms2_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:09:47Z"
+    },
+    "e9bd91aafa3074d0": {
+      "text": "Does the ticket state that the customer has already received an item?",
+      "criteria": null,
+      "provenance": "induced:pair:exchange_vs_modify_order",
+      "runs": [
+        "ms2_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:09:47Z"
+    },
+    "181ddb5bffce06c6": {
+      "text": "Does the text mention that an item was received?",
+      "criteria": null,
+      "provenance": "induced:pair:auto_approve_vs_escalate",
+      "runs": [
+        "ms2_20261114_025810"
+      ],
+      "first_seen": "2026-11-14T03:09:47Z"
+    },
+    "b09285fd9aabf70d": {
+      "text": "Which category best matches this ticket's request?",
+      "criteria": null,
+      "provenance": "expA:choice",
+      "runs": [
+        "expA"
+      ],
+      "first_seen": "2026-11-14T11:19:37Z",
+      "decision_type": "choice",
+      "options": {
+        "auto_approve": "auto approve",
+        "cancel_order": "cancel order",
+        "escalate": "escalate",
+        "exchange": "exchange",
+        "modify_order": "modify order",
+        "modify_user": "modify user",
+        "out_of_scope": "out of scope",
+        "politely_deny": "politely deny"
+      },
+      "rubric": null
+    },
+    "7d58227ba44bada9": {
+      "text": "Grade this ticket on the rubric.",
+      "criteria": null,
+      "provenance": "expA:score",
+      "runs": [
+        "expA"
+      ],
+      "first_seen": "2026-11-14T11:19:37Z",
+      "decision_type": "score",
+      "options": null,
+      "rubric": [
+        "Single order exchange request referencing specific replacement preferences and an order ID.",
+        "Multi-item exchange request requiring multiple replacements without an order ID.",
+        "Compound inquiry combining store inventory questions with order returns or modifications."
+      ]
+    },
+    "c5785f4d3971e37e": {
+      "text": "Which post-purchase resolution is primarily sought?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T11:21:26Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "Item exchange or configuration update",
+        "o1": "Product return, refund, or order cancellation",
+        "o2": "Payment method inquiry or verification"
+      },
+      "rubric": null
+    },
+    "bdd0cd19f0b60322": {
+      "text": "Does the request mention modifying a pending or unfulfilled order?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T11:21:26Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "16dc4bf0f8e8666a": {
+      "text": "What is the primary adjustment sought regarding order items?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T23:31:31Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "Modifying item attributes or exchanging items",
+        "o1": "Returning items for a refund or cancelling items entirely",
+        "o2": "Inquiring without item modifications"
+      },
+      "rubric": null
+    },
+    "25e168df26c0d819": {
+      "text": "Does the customer ask about an order that is pending, not yet delivered, or recently submitted?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T23:31:31Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "3b52f335fd6ab344": {
+      "text": "Does the customer explicitly mention being frustrated or in a bad mood?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T23:31:31Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "7763a01b489aba68": {
+      "text": "Does the customer request assistance regarding a physical delivery or account address?",
+      "criteria": null,
+      "provenance": "expB",
+      "runs": [
+        "expB"
+      ],
+      "first_seen": "2026-11-14T23:31:31Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "3e9ba18ddd9f1114": {
+      "text": "Does the customer's request include canceling, returning, or removing an order or item (including as an alternative option)?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "94ddf3e252d485c4": {
+      "text": "Does the customer explicitly request to cancel one or more entire pending orders?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "4282cdf2f6d1c5fe": {
+      "text": "Does the customer ask to change the delivery address or shipping destination for an order?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "91bebeb0658b081a": {
+      "text": "Does the customer specify desired product attributes (such as size, material, or feature variant) for an exchanged or replacement item?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "f3e2efa241a51525": {
+      "text": "What is the product scope of the customer's request?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "a single product",
+        "o1": "multiple distinct products"
+      },
+      "rubric": null
+    },
+    "1befaaff65001777": {
+      "text": "Does the customer ask to update, change, or check a delivery address or user profile location?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter8"
+      ],
+      "first_seen": "2026-11-15T00:24:43Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "421897442e03dd08": {
+      "text": "Does the customer explicitly mention cancellation (or cancelling an order/item) as a primary action or fallback option?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "9ca58631d7de7855": {
+      "text": "Does the customer indicate an intent to cancel an entire order or all pending orders if their condition is not met?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "164a20273e0d5af1": {
+      "text": "Does the user express an intent to modify one or more pending orders?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "ce5a32d400d8f22d": {
+      "text": "Which primary resolution does the customer seek for their merchandise?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "Exclusively exchanging items for alternative specifications",
+        "o1": "A combination of returns and exchanges",
+        "o2": "Exclusively returning items or canceling pending purchases"
+      },
+      "rubric": null
+    },
+    "4090c9fc18729bcc": {
+      "text": "Does the customer's inquiry concern viewing, changing, or correcting a delivery or user profile address?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "2aeea04774cd3b82": {
+      "text": "Does the customer mention experiencing a personal issue, such as a financial hardship or a lost or damaged item?",
+      "criteria": null,
+      "provenance": "iter8",
+      "runs": [
+        "iter9"
+      ],
+      "first_seen": "2026-11-15T12:08:01Z",
+      "decision_type": "noul",
+      "options": null,
+      "rubric": null
+    },
+    "94f5445429f6aebb": {
+      "text": "What is the customer's primary objective regarding their account or order?",
+      "criteria": null,
+      "provenance": "oneshot",
+      "runs": [
+        "oneshot"
+      ],
+      "first_seen": "2026-11-15T23:05:20Z",
+      "decision_type": "choice",
+      "options": {
+        "o0": "Inquire about order information or price paid without requesting changes",
+        "o1": "Update user account profile or permanent address"
+      },
+      "rubric": null
+    }
+  }
+}

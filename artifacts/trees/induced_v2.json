@@ -1,0 +1,55 @@
+{
+  "tree_id": "induced_20261114_014845",
+  "version": 1,
+  "root": "n001",
+  "nodes": {
+    "n003": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "cancel_order"
+    },
+    "n004": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "auto_approve"
+    },
+    "n002": {
+      "question_qid": "q_6ad4ebc94774ad14",
+      "child_yes": "n003",
+      "child_no": "n004",
+      "leaf_label": null
+    },
+    "n005": {
+      "question_qid": null,
+      "child_yes": null,
+      "child_no": null,
+      "leaf_label": "modify_order"
+    },
+    "n001": {
+      "question_qid": "q_bdf3877bffd446dc",
+      "child_yes": "n002",
+      "child_no": "n005",
+      "leaf_label": null
+    }
+  },
+  "questions": {
+    "q_bdf3877bffd446dc": {
+      "qid": "q_bdf3877bffd446dc",
+      "text": "Does the text mention cancelling the whole order or order cancellation?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:ovr:cancel_order",
+      "resolver": null
+    },
+    "q_6ad4ebc94774ad14": {
+      "qid": "q_6ad4ebc94774ad14",
+      "text": "Does the ticket mention cancelling the entire or whole order if an alternative action is not possible or available?",
+      "qtype": "semantic",
+      "version": 1,
+      "provenance": "induced:pair:cancel_order_vs_auto_approve",
+      "resolver": null
+    }
+  }
+}

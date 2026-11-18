@@ -1,0 +1,38 @@
+{
+  "included": [
+    "Is the customer currently traveling outside their domestic network area or abroad?",
+    "Have basic local troubleshooting steps, such as toggling airplane mode, already been completed?"
+  ],
+  "remaining": [
+    "Does the customer specifically state that their phone is displaying a 'No Service' message?",
+    "Is the customer contacting specifically about an inability to send MMS messages?",
+    "Has the user already attempted restarting their device during the current troubleshooting session?"
+  ],
+  "round": 2,
+  "scores": {
+    "r2::Does the customer specifically state that their phone is displaying a 'No Service' message?": 0.2664,
+    "r2::Is the customer contacting specifically about an inability to send MMS messages?": 0.2358,
+    "r2::Has the user already attempted restarting their device during the current troubleshooting session?": 0.2959
+  },
+  "history": [
+    {
+      "round": 0,
+      "event": "baseline (computed only)",
+      "macro_f1": 0.0395
+    },
+    {
+      "round": 1,
+      "event": "added",
+      "question": "Is the customer currently traveling outside their domestic network area or abroa",
+      "macro_f1": 0.2805
+    },
+    {
+      "round": 2,
+      "event": "added",
+      "question": "Have basic local troubleshooting steps, such as toggling airplane mode, already ",
+      "macro_f1": 0.2959
+    }
+  ],
+  "done": true,
+  "baseline": 0.03946360153256705
+}

@@ -1,0 +1,3 @@
+task_id,label,matched_action,ambiguous,reasons,user_join,orders_joined,reason_for_call,audit_sample
+0,exchange,exchange_delivered_order_items,no,,yusuf_rossi_9620,#W2378156,You received your order #W2378156 and wish to exchange the mechanical keyboard for the same one but with clicky switches and the smart thermostat for one compat,yes
+1,exchange,exchange_delivered_order_items,no,,yusuf_rossi_9620,#W2378156,You received your order #W2378156 and wish to exchange the mechanical keyboard for the same one but with clicky switches and the smart thermostat for one compat,yes

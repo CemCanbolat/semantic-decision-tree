@@ -1,0 +1,71 @@
+{
+  "experiment": "iteration12_fix1234",
+  "questions": [
+    "Does the customer report seeing a \"No Service\" notification or complete loss of cellular network signal?",
+    "Does the user report seeing a 'No Service' status on their phone?",
+    "Does the recommended resolution require toggling cellular data roaming settings on the device?",
+    "Does the complaint specifically involve the use of a messaging application?",
+    "Does the ticket indicate that the user is currently traveling or connected outside of their home network coverage area?",
+    "Is the customer currently traveling internationally or located outside their home network area?",
+    "Does the inquiry specifically mention degraded mobile data speed?"
+  ],
+  "results": {
+    "alpha1": {
+      "dims": 37,
+      "cv_accuracy": 0.8214,
+      "cv_macro_f1": 0.2755,
+      "temperature": 0.4675,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 0.7821,
+        "precision": 0.9703,
+        "threshold": 0.2
+      },
+      "per_class_recall": {
+        "disconnect_vpn": "0/4",
+        "escalate": "32/32",
+        "grant_app_permission": "40/48",
+        "reboot_device": "0/14",
+        "refuel_data": "41/156",
+        "reseat_sim_card": "60/256",
+        "set_network_mode_preference": "0/4",
+        "toggle_airplane_mode": "0/1",
+        "toggle_data": "24/86",
+        "toggle_roaming": "1680/1680",
+        "toggle_wifi_calling": "0/4"
+      }
+    },
+    "mild": {
+      "dims": 37,
+      "cv_accuracy": 0.8709,
+      "cv_macro_f1": 0.2498,
+      "temperature": 0.6182,
+      "coverage_at_0.97": {
+        "target_precision": 0.97,
+        "coverage": 0.7558,
+        "precision": 0.9913,
+        "threshold": 0.7
+      },
+      "per_class_recall": {
+        "disconnect_vpn": "0/4",
+        "escalate": "32/32",
+        "grant_app_permission": "0/48",
+        "reboot_device": "0/14",
+        "refuel_data": "30/156",
+        "reseat_sim_card": "248/256",
+        "set_network_mode_preference": "0/4",
+        "toggle_airplane_mode": "0/1",
+        "toggle_data": "0/86",
+        "toggle_roaming": "1680/1680",
+        "toggle_wifi_calling": "0/4"
+      }
+    }
+  },
+  "vs_previous": {
+    "grow_macro_f1": 0.2101,
+    "selected_macro_f1": 0.2183,
+    "coverage": "0.750 at 0.992"
+  },
+  "wall_seconds": 4241,
+  "best_feature_set": "iter12"
+}

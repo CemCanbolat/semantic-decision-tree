@@ -1,0 +1,305 @@
+{
+  "v0_hand": {
+    "accuracy": 0.1754,
+    "macro_f1": 0.1928
+  },
+  "v1_induced": {
+    "accuracy": 0.6667,
+    "macro_f1": 0.4555,
+    "questions": 9,
+    "leaves": 12
+  },
+  "v2_validation_gate": {
+    "accuracy": 0.3509,
+    "macro_f1": 0.1596,
+    "questions": 2,
+    "leaves": 3,
+    "verdict": "underfit: gate too strict"
+  },
+  "v3_veto": {
+    "accuracy": 0.6491,
+    "macro_f1": 0.3982,
+    "questions": 7,
+    "leaves": 8,
+    "politely_deny_recall": "5/5",
+    "memorized_questions": 0,
+    "coverage_peak_precision": "0.703 at 0.798 coverage"
+  },
+  "v3_combiner": {
+    "eval": "5-fold out-of-fold (honest)",
+    "accuracy": 0.6228,
+    "macro_f1": 0.4913,
+    "temperature": 0.7109,
+    "features": 11,
+    "coverage_at_0.97": "0.105 at precision 1.0",
+    "first_nonzero": [
+      "escalate 1/4",
+      "modify_user 1/6"
+    ],
+    "exchange_recall": "23/26"
+  },
+  "v3_plus_v1_combiner": {
+    "accuracy": 0.6579,
+    "macro_f1": 0.4876,
+    "coverage_at_0.97": "0.053 at precision 1.0",
+    "verdict": "more features help accuracy, dilute rare-class precision"
+  },
+  "iter4_criteria": {
+    "all_criteria": {
+      "accuracy": 0.5614,
+      "macro_f1": 0.4321,
+      "coverage_at_0.97": "0.140"
+    },
+    "union_features": {
+      "accuracy": 0.5965,
+      "macro_f1": 0.4768,
+      "coverage_at_0.97": "0.132"
+    },
+    "city_criteria_only_best": {
+      "accuracy": 0.6316,
+      "macro_f1": 0.504,
+      "coverage_at_0.97": "0.114",
+      "temperature": 0.71
+    },
+    "per_question": "city=keep (+0.013); multi-order/pending=neutral; exchange/received/modify/return=hurt"
+  },
+  "iter5_fresh_v4": {
+    "tree_alone": {
+      "accuracy": 0.6579,
+      "macro_f1": 0.4001,
+      "combiner_cv": {
+        "accuracy": 0.4825,
+        "macro_f1": 0.4092,
+        "coverage_at_0.97": null
+      }
+    },
+    "computed_seed_won_node": "pending seed, ig 0.801, cert 1.000",
+    "predictions": "1-2 confirmed, 3-4 falsified",
+    "v3_plus_v4_union": {
+      "accuracy": 0.6316,
+      "macro_f1": 0.5632,
+      "coverage_at_0.97": "0.079 at 1.0",
+      "modify_user_recall": "4/6",
+      "verdict": "new project record; the bank compounds"
+    }
+  },
+  "iter6_bank_offline_bootstrap": {
+    "features": 23,
+    "accuracy": 0.6491,
+    "macro_f1": 0.534,
+    "coverage_at_0.97": "0.132 at 1.0",
+    "vs_union_v3v4": "accuracy up, macro_f1 down (0.5632 -> 0.5340); rare classes diluted",
+    "lesson": "bank needs selection, not just accumulation"
+  },
+  "iter6_final": {
+    "bank_all_33_features": {
+      "accuracy": 0.6491,
+      "macro_f1": 0.5178,
+      "coverage_at_0.97": "0.061"
+    },
+    "selected_9_features": {
+      "accuracy": 0.6579,
+      "macro_f1": 0.5736,
+      "coverage_at_0.97": "0.009",
+      "temperature": 0.62,
+      "escalate": "3/4",
+      "modify_user": "6/6",
+      "verdict": "macro-F1 champion; rare classes solved"
+    },
+    "selection_trajectory": [
+      0.1917,
+      0.377,
+      0.4722,
+      0.5161,
+      0.5548,
+      0.5736
+    ]
+  },
+  "iter7_experiments": {
+    "A_constrained": {
+      "choice_tree": {
+        "accuracy": 0.386,
+        "macro_f1": 0.358
+      },
+      "combiner_2questions": {
+        "accuracy": 0.5877,
+        "macro_f1": 0.5006
+      }
+    },
+    "B_free": {
+      "types": {
+        "choice": 1,
+        "noul": 3
+      },
+      "tree": {
+        "accuracy": 0.7018,
+        "macro_f1": 0.5277,
+        "coverage_at_0.97": "0.105 at 1.0"
+      },
+      "combiner": {
+        "accuracy": 0.5263,
+        "macro_f1": 0.4496
+      },
+      "verdict": "best pure tree ever; choice won the root"
+    },
+    "C_paraphrase": {
+      "originals": {
+        "accuracy": 0.6754,
+        "macro_f1": 0.5903
+      },
+      "with_paraphrases": {
+        "accuracy": 0.6754,
+        "macro_f1": 0.5894
+      },
+      "verdict": "falsified: paraphrases add nothing; champion true value ~0.59"
+    }
+  },
+  "iter8_deep_soft": {
+    "oof_accuracy": 0.4912,
+    "oof_macro_f1": 0.3154,
+    "fold_macro_f1": [
+      0.471,
+      0.2634,
+      0.2158,
+      0.2842,
+      0.3425
+    ],
+    "final_tree": {
+      "nodes": 19,
+      "depth": 5,
+      "questions": 8
+    },
+    "verdict": "falsified: depth does not pay at 114 examples; combiner-as-decision-surface confirmed as champion architecture",
+    "champion_remains": "bank-selected combiner 0.5903"
+  },
+  "iter9_full_corpus": {
+    "tree_insample": {
+      "accuracy": 0.7281,
+      "macro_f1": 0.5809,
+      "nodes": 26,
+      "leaves": 19,
+      "mean_depth": 1.47,
+      "max_depth": 4,
+      "questions": 9
+    },
+    "combiner_cv": {
+      "accuracy": 0.6053,
+      "macro_f1": 0.5105,
+      "temperature": 0.8175
+    },
+    "verdict": "mechanisms vindicated: beats B everywhere; champion (bank selection) still leads; bank now 49 questions"
+  },
+  "iter10_bank_selection_v2": {
+    "system": "6 semantic + 4 computed (10 features)",
+    "cv_accuracy": 0.693,
+    "cv_macro_f1": 0.6453,
+    "temperature": 0.62,
+    "coverage_at_0.97": "0.237 at 1.00 precision",
+    "per_class": {
+      "escalate": "3/4",
+      "modify_user": "5/6",
+      "out_of_scope": "2/2",
+      "exchange": "23/26",
+      "auto_approve": "19/27",
+      "cancel": "7/10"
+    },
+    "key_addition": "iter9's canceling-returning-removing question (+0.07 on trajectory)",
+    "trajectory": [
+      0.1917,
+      0.377,
+      0.4722,
+      0.5238,
+      0.6057,
+      0.6183,
+      0.6453
+    ]
+  },
+  "iter11_cross_domain": {
+    "airline_n50": {
+      "grow_combiner_macro_f1": 0.4706,
+      "selected_macro_f1": 0.26,
+      "verdict": "grower transfers; selection breaks at n=50"
+    },
+    "telecom_base_n114": {
+      "grow_macro_f1": 0.3161,
+      "selected_macro_f1": 0.2959,
+      "coverage_at_0.97": "0.561 at 1.00"
+    },
+    "telecom_full_n2285": {
+      "selected_macro_f1": 0.2183,
+      "coverage_at_0.97": "0.750 at 0.992",
+      "verdict": "data-volume thesis confirmed for the triage head; tail still unreachable under 73% imbalance + 1-4-example classes"
+    },
+    "mechanical_transfer": "yes - one pipeline, three domains, zero code changes"
+  },
+  "holdout_confirmation": {
+    "protocol": "softmax on 74 train only; evaluated once on tau2's 40 untouched test",
+    "test": {
+      "accuracy": 0.775,
+      "macro_f1": 0.7555,
+      "coverage_at_0.97": "0.05 at 1.00 (2/40)"
+    },
+    "train_reference": {
+      "accuracy": 0.7432,
+      "macro_f1": 0.7206
+    },
+    "verdict": "weights do not overfit; macro-F1 stands; coverage head needs bigger test sets; question selection still saw the test fold"
+  },
+  "iter12_telecom_full": {
+    "alpha1": {
+      "macro_f1": 0.2755,
+      "accuracy": 0.8214,
+      "coverage": "0.782 @ 0.970",
+      "reseat": "60/256"
+    },
+    "mild": {
+      "macro_f1": 0.2498,
+      "accuracy": 0.8709,
+      "coverage": "0.756 @ 0.991",
+      "reseat": "248/256"
+    },
+    "vs_iter11": {
+      "macro_f1": 0.2183,
+      "coverage": "0.750 @ 0.992",
+      "reseat": "0/256"
+    },
+    "verdict": "fix package validated; reseat unlocked; alpha is a dial"
+  },
+  "b1_final_clean": {
+    "retail": {
+      "b1": [
+        0.5965,
+        0.5566
+      ],
+      "pipeline_cv": [
+        0.693,
+        0.6453
+      ],
+      "pipeline_holdout": [
+        0.775,
+        0.7555
+      ]
+    },
+    "airline": {
+      "b1": [
+        0.48,
+        0.3277
+      ],
+      "pipeline": [
+        0.62,
+        0.4706
+      ]
+    },
+    "telecom_full": {
+      "b1": [
+        0.0919,
+        0.0227
+      ],
+      "pipeline_iter12": [
+        0.8709,
+        0.2498
+      ]
+    },
+    "verdict": "pipeline wins everywhere; failure modes confirm the founding hypothesis"
+  }
+}
