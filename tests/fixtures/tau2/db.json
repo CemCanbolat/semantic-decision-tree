@@ -1,0 +1,50 @@
+{
+  "_fixture_note": "SYNTHETIC join fixture built for tests. The tasks in tasks.json are real tau2-bench retail tasks 0-1 (fetched 2026-11-13); this db.json is a minimal hand-built stand-in matching the retail data_model.py field names, not the upstream database.",
+  "products": {
+    "1656367028": {
+      "name": "Mechanical Keyboard",
+      "product_id": "1656367028",
+      "variants": {
+        "1151293680": {"item_id": "1151293680", "options": {"switch": "linear", "backlight": "RGB", "size": "full"}, "available": true, "price": 109.0},
+        "7706410293": {"item_id": "7706410293", "options": {"switch": "clicky", "backlight": "none", "size": "full"}, "available": true, "price": 99.0}
+      }
+    },
+    "4896585277": {
+      "name": "Smart Thermostat",
+      "product_id": "4896585277",
+      "variants": {
+        "4983901480": {"item_id": "4983901480", "options": {"compatibility": "Apple HomeKit"}, "available": true, "price": 89.0},
+        "7747408585": {"item_id": "7747408585", "options": {"compatibility": "Google Home"}, "available": true, "price": 89.0}
+      }
+    }
+  },
+  "users": {
+    "yusuf_rossi_9620": {
+      "user_id": "yusuf_rossi_9620",
+      "name": {"first_name": "Yusuf", "last_name": "Rossi"},
+      "address": {"address1": "1234 N Broad St", "address2": null, "city": "Philadelphia", "state": "PA", "country": "USA", "zip": "19122"},
+      "email": "yusuf.rossi@example.com",
+      "payment_methods": {
+        "credit_card_9513926": {"source": "credit_card", "id": "credit_card_9513926", "brand": "visa", "last_four": "4242"}
+      },
+      "orders": ["#W2378156"]
+    }
+  },
+  "orders": {
+    "#W2378156": {
+      "order_id": "#W2378156",
+      "user_id": "yusuf_rossi_9620",
+      "address": {"address1": "1234 N Broad St", "address2": null, "city": "Philadelphia", "state": "PA", "country": "USA", "zip": "19122"},
+      "status": "delivered",
+      "items": [
+        {"item_id": "1151293680", "name": "Mechanical Keyboard", "product_id": "1656367028", "price": 109.0, "options": {"switch": "linear", "backlight": "RGB", "size": "full"}},
+        {"item_id": "4983901480", "name": "Smart Thermostat", "product_id": "4896585277", "price": 89.0, "options": {"compatibility": "Apple HomeKit"}}
+      ],
+      "fulfillments": [{"tracking_id": ["TRK8915"], "item_ids": ["1151293680", "4983901480"]}],
+      "payment_history": [{"transaction_type": "payment", "amount": 198.0, "payment_method_id": "credit_card_9513926"}],
+      "cancel_reason": null,
+      "return_items": null,
+      "return_payment_method_id": null
+    }
+  }
+}

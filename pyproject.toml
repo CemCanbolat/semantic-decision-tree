@@ -1,0 +1,8 @@
+[project]
+name = "sdt"
+version = "0.1.0"
+description = "Semantic decision trees: parallel-batch question trees over unstructured data"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+# pytest unavailable in this sandbox; tests run via stdlib unittest discover
